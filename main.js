@@ -941,4 +941,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // Run periodically to catch newly rendered products in the catalog
     setInterval(addHoverEffects, 1500);
   }
+
+  // --- DYNAMIC INTRO SLIDESHOW ROTATION (3S CYCLE) ---
+  const initIntroSlideshow = () => {
+    const slides = document.querySelectorAll('.slide-img');
+    if (slides.length === 0) return;
+    
+    let currentSlide = 0;
+    
+    setInterval(() => {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }, 3000); // 3-second visual rotation loop
+  };
+  
+  initIntroSlideshow();
 });
