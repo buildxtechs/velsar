@@ -1958,23 +1958,32 @@ textarea.form-input {
   border-color: rgba(255, 87, 87, 0.3) !important;
 }
 
-/* --- CUSTOM DYNAMIC GLASS CURSOR --- */
+/* --- CUSTOM DYNAMIC GLASS CURSOR (Apparel Stitching Theme) --- */
 .custom-cursor {
-  width: 20px;
-  height: 20px;
-  border: 2px solid var(--accent);
+  width: 22px;
+  height: 22px;
+  border: 1.5px dashed var(--accent); /* Elegant dashed sewing stitches! */
   border-radius: 50%;
   position: fixed;
   transform: translate(-50%, -50%);
   pointer-events: none;
   z-index: 9999;
-  transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
   mix-blend-mode: difference;
+  animation: cursorSewingSpin 8s linear infinite; /* Smooth rotating thread loop */
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1), height 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease, border-color 0.3s ease;
+}
+@keyframes cursorSewingSpin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
 .custom-cursor-dot {
   width: 4px;
   height: 4px;
-  background-color: var(--accent);
+  background-color: var(--accent); /* needle tip center point */
   border-radius: 50%;
   position: fixed;
   transform: translate(-50%, -50%);
@@ -1982,10 +1991,19 @@ textarea.form-input {
   z-index: 9999;
 }
 .custom-cursor.hover {
-  width: 50px;
-  height: 50px;
-  background-color: rgba(197, 168, 128, 0.15);
-  border-color: var(--accent-light);
+  width: 55px;
+  height: 55px;
+  background-color: rgba(197, 168, 128, 0.12);
+  border: 2px dashed var(--accent-light); /* Opens custom stitch block */
+  animation: cursorSewingActiveSpin 2s linear infinite; /* Spins rapidly like active sewing machine stitch! */
+}
+@keyframes cursorSewingActiveSpin {
+  from {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
 }
 
 /* --- SCROLL PROGRESS BAR --- */
