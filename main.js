@@ -7,7 +7,7 @@ const DEFAULT_PRODUCTS = [
     code: 'VS-TS-OS-01',
     category: 't-shirts',
     categoryLabel: 'T-Shirt Collection',
-    image: 'Products/file_0000000038547207a33171f38af7da6e.png',
+    image: 'Shoot/Oversize.png',
     fabric: 'Single Jersey, 100% Super-Combed Cotton',
     gsm: '240 / 300 GSM (Heavyweight)',
     desc: 'Expertly designed oversized t-shirt crafted for premium streetwear labels. Features a boxy silhouette, drop shoulders, and a thick ribbed collar that holds its shape. Perfect for high-density puff printing or custom embroidery.'
@@ -18,7 +18,7 @@ const DEFAULT_PRODUCTS = [
     code: 'VS-TS-RF-02',
     category: 't-shirts',
     categoryLabel: 'T-Shirt Collection',
-    image: 'Products/file_0000000069e871fa9663bd972a6f3b03.png',
+    image: 'Shoot/Regular Fit T Shirt.png',
     fabric: 'Single Jersey, 100% Cotton, Biowashed',
     gsm: '180 / 210 GSM',
     desc: 'Classic export-quality retail fit. Durable, breathable, and exceptionally soft due to premium silicon washing. Ideal for corporate branding, retail merchandising, and casual fashion brands.'
@@ -29,7 +29,7 @@ const DEFAULT_PRODUCTS = [
     code: 'VS-TS-BX-03',
     category: 't-shirts',
     categoryLabel: 'T-Shirt Collection',
-    image: 'Products/file_0000000038547207a33171f38af7da6e.png',
+    image: 'Shoot/Boxy Fit.png',
     fabric: 'Single Jersey, 100% Cotton, Pre-shrunk',
     gsm: '240 GSM',
     desc: 'Features a contemporary cropped length and wide shoulders for a premium boxy streetwear look. Made from combed cotton that provides ultimate comfort and print stability.'
@@ -40,7 +40,7 @@ const DEFAULT_PRODUCTS = [
     code: 'VS-TS-PL-04',
     category: 't-shirts',
     categoryLabel: 'T-Shirt Collection',
-    image: 'Products/file_0000000069e871fa9663bd972a6f3b03.png',
+    image: 'Shoot/Polo T SHirt.png',
     fabric: 'Pique Knit, Premium Cotton Blend',
     gsm: '220 / 240 GSM',
     desc: 'Refined Polo T-Shirt featuring a custom-engineered knit collar and cuffs. Double needle stitched hems make it ideal for high-end corporate uniforms and country-club sportswear collections.'
@@ -51,7 +51,7 @@ const DEFAULT_PRODUCTS = [
     code: 'VS-TS-AW-05',
     category: 't-shirts',
     categoryLabel: 'T-Shirt Collection',
-    image: 'Products/file_000000005f0471faa52acdee8a40f5bd.png',
+    image: 'Shoot/Acideash.png',
     fabric: '100% Cotton, Specially Treated Acid Wash',
     gsm: '240 GSM',
     desc: 'Streetwear staple featuring a beautiful vintage weathered look. Individually acid-washed for unique marbling effects. The fabric feels exceptionally soft and broke-in.'
@@ -62,7 +62,7 @@ const DEFAULT_PRODUCTS = [
     code: 'VS-TS-LD-06',
     category: 't-shirts',
     categoryLabel: 'T-Shirt Collection',
-    image: 'Products/file_0000000061847207aba7363f8ef56bfb.png',
+    image: 'Shoot/Lava Dyeing.png',
     fabric: '100% Cotton, Lava-Dyed Finished',
     gsm: '240 GSM',
     desc: 'Dyed using advanced lava-dyeing techniques to achieve soft transitions and high-fashion seam fading. Pre-washed for a premium feel and zero-shrinkage.'
@@ -73,7 +73,7 @@ const DEFAULT_PRODUCTS = [
     code: 'VS-TS-OW-07',
     category: 't-shirts',
     categoryLabel: 'T-Shirt Collection',
-    image: 'Products/file_000000005f0471faa52acdee8a40f5bd.png',
+    image: 'Shoot/Optic Wash.png',
     fabric: '100% Combed Cotton, Optic Bio-Washed',
     gsm: '210 GSM',
     desc: 'Brilliant optic white color retention. Advanced washing prevents yellowing and maintains a stark, luxury retail feel over dozens of wash cycles.'
@@ -84,7 +84,7 @@ const DEFAULT_PRODUCTS = [
     code: 'VS-TS-TD-08',
     category: 't-shirts',
     categoryLabel: 'T-Shirt Collection',
-    image: 'Products/file_0000000061847207aba7363f8ef56bfb.png',
+    image: 'Shoot/Tie and Dye.png',
     fabric: '100% Cotton, Hand-Tied Premium Pigments',
     gsm: '180 GSM',
     desc: 'Each shirt is hand-dyed by skilled artisans using non-toxic premium pigments. Vibrant swirl patterns that do not bleed. A must-have for summer collections.'
@@ -95,7 +95,7 @@ const DEFAULT_PRODUCTS = [
     code: 'VS-TS-CW-09',
     category: 't-shirts',
     categoryLabel: 'T-Shirt Collection',
-    image: 'Products/file_000000005f0471faa52acdee8a40f5bd.png',
+    image: 'Shoot/CPT Wash.png',
     fabric: 'Cold-Pigment Dyed Combed Cotton',
     gsm: '240 GSM',
     desc: 'Cold Pigment Treatment (CPT) gives a premium distressed look at structural seams and hems. Specially designed for modern urban fashion catalog collections.'
@@ -106,7 +106,7 @@ const DEFAULT_PRODUCTS = [
     code: 'VS-TS-RG-10',
     category: 't-shirts',
     categoryLabel: 'T-Shirt Collection',
-    image: 'Products/file_0000000069e871fa9663bd972a6f3b03.png',
+    image: 'Shoot/Reygon.png',
     fabric: 'Premium Jersey, Contrast Sleeves',
     gsm: '200 GSM',
     desc: 'Raglan-style construction with cross-cut sleeves for maximum upper body comfort. Multi-thread flatlock stitching highlights the athletic structural lines.'
@@ -119,7 +119,7 @@ const DEFAULT_PRODUCTS = [
     code: 'VS-V-RG-01',
     category: 'vest',
     categoryLabel: 'Vest Collection',
-    image: 'Products/file_00000000c6a871fab4203187f5a46f55.png',
+    image: 'Shoot/Regular Vest.png',
     fabric: 'Rib Knit, 100% Combed Cotton',
     gsm: '180 GSM',
     desc: 'Classic ribbed athletic vest. Designed with deep-cut armholes and a smooth scoop neck. Perfect for gym wear or inner layering.'
@@ -130,7 +130,7 @@ const DEFAULT_PRODUCTS = [
     code: 'VS-V-WR-02',
     category: 'vest',
     categoryLabel: 'Vest Collection',
-    image: 'Products/file_00000000c6a871fab4203187f5a46f55.png',
+    image: 'Shoot/Washed Regular Vest.png',
     fabric: 'Cotton Rib, Specially Enzyme Washed',
     gsm: '180 GSM',
     desc: 'Enzyme washed rib vest to achieve supreme comfort and an ultra-soft texture. Pre-shrunk to secure structural stability through washes.'
@@ -141,7 +141,7 @@ const DEFAULT_PRODUCTS = [
     code: 'VS-V-WO-03',
     category: 'vest',
     categoryLabel: 'Vest Collection',
-    image: 'Products/file_00000000c6a871fab4203187f5a46f55.png',
+    image: 'Shoot/Vest Collection.png',
     fabric: 'Heavyweight Rib Cotton',
     gsm: '220 GSM',
     desc: 'Modern streetwear drop-shoulder tank styled with a wider shoulder cut and flat bottom. Very popular in current casual streetwear collections.'
@@ -154,7 +154,7 @@ const DEFAULT_PRODUCTS = [
     code: 'VS-W-CS-01',
     category: 'women',
     categoryLabel: "Women's Collection",
-    image: 'Products/file_00000000d3ec71faac2177c0ca79652a.png',
+    image: 'Shoot/Oversize Sweatshirt.png',
     fabric: 'French Terry, Super-Soft Cotton Blend',
     gsm: '280 GSM',
     desc: 'Features a stylish cropped length, ribbed wristbands, and an oversized sleeve drape. Modern design engineered for maximum athleisure comfort.'
@@ -165,7 +165,7 @@ const DEFAULT_PRODUCTS = [
     code: 'VS-W-CT-02',
     category: 'women',
     categoryLabel: "Women's Collection",
-    image: 'Products/file_00000000d3ec71faac2177c0ca79652a.png',
+    image: 'Shoot/Oversize Croptop.png',
     fabric: '100% Premium Combed Cotton',
     gsm: '180 / 200 GSM',
     desc: 'Chic crop top with dropped shoulders and raw hem options. Perfect for minimalist fashion designs and custom screen printing.'
@@ -176,7 +176,7 @@ const DEFAULT_PRODUCTS = [
     code: 'VS-W-TGT-03',
     category: 'women',
     categoryLabel: "Women's Collection",
-    image: 'Products/file_00000000d3ec71faac2177c0ca79652a.png',
+    image: 'Shoot/Croptop.png',
     fabric: 'French Terry, Ribbed Underband',
     gsm: '280 GSM',
     desc: 'Features a tight ribbed elastic bottom band (TGT Bottom) to create a structured blouson effect. Modern streetwear aesthetic for female urban fashion.'
@@ -187,7 +187,7 @@ const DEFAULT_PRODUCTS = [
     code: 'VS-W-CPS-04',
     category: 'women',
     categoryLabel: "Women's Collection",
-    image: 'Products/file_00000000d3ec71faac2177c0ca79652a.png',
+    image: 'Shoot/Croptop Polo T Shirt.png',
     fabric: 'French Terry Cotton with Knit Polo Collar',
     gsm: '260 GSM',
     desc: 'A fusion of vintage sportiness and modern streetwear. Features a heavy-knit polo collar and a premium silver-zip detail at the neckline.'
@@ -198,7 +198,7 @@ const DEFAULT_PRODUCTS = [
     code: 'VS-W-VS-05',
     category: 'women',
     categoryLabel: "Women's Collection",
-    image: 'Products/file_00000000c6a871fab4203187f5a46f55.png',
+    image: 'Shoot/Womens Vest.png',
     fabric: 'Rib Knit, Soft Cotton Elastane Blend',
     gsm: '210 GSM',
     desc: 'Fitted vest with excellent stretch recovery. Hugs the body comfortably without losing its shape over time. Very soft and skin-friendly fabric.'
@@ -209,7 +209,7 @@ const DEFAULT_PRODUCTS = [
     code: 'VS-W-HS-06',
     category: 'women',
     categoryLabel: "Women's Collection",
-    image: 'Products/file_00000000d3ec71faac2177c0ca79652a.png',
+    image: 'Shoot/Half Sleeve.png',
     fabric: '100% Cotton, Silicon Finished',
     gsm: '180 GSM',
     desc: 'Slightly contoured loose-fit half sleeve t-shirt. Double stitched seams with back-neck reinforcement tapes for maximum longevity.'
@@ -222,7 +222,7 @@ const DEFAULT_PRODUCTS = [
     code: 'VS-H-OS-01',
     category: 'hoodies',
     categoryLabel: 'Hoodies Collection',
-    image: 'Products/file_00000000db8471fab0f239b2f6c87795.png',
+    image: 'Shoot/Oversize Hoodies.png',
     fabric: 'Heavy French Terry / Brushed Fleece',
     gsm: '320 / 360 / 400 GSM',
     desc: 'Premium high-street heavy hoodie. Double-lined hood, no drawstrings for a clean futuristic look, kangaroo pocket, and drop-shoulder boxy cuts.'
@@ -233,7 +233,7 @@ const DEFAULT_PRODUCTS = [
     code: 'VS-H-RF-02',
     category: 'hoodies',
     categoryLabel: 'Hoodies Collection',
-    image: 'Products/file_00000000db8471fab0f239b2f6c87795.png',
+    image: 'Shoot/Regular Hoodies.png',
     fabric: 'French Terry Cotton, Metal Eyelets',
     gsm: '300 GSM',
     desc: 'Standard luxury retail fit. Features thick round woven drawstrings with premium metal tips, double-needle seams, and robust ribbed cuffs.'
@@ -244,7 +244,7 @@ const DEFAULT_PRODUCTS = [
     code: 'VS-H-ZH-03',
     category: 'hoodies',
     categoryLabel: 'Hoodies Collection',
-    image: 'Products/file_00000000db8471fab0f239b2f6c87795.png',
+    image: 'Shoot/Zipper Hoodies.png',
     fabric: 'French Terry Cotton, YKK Heavy-Duty Zip',
     gsm: '340 GSM',
     desc: 'Streetwear full-zip hoodie featuring custom gunmetal YKK zipper, double-layered hood, dropped shoulders, and massive kangaroo pockets.'
@@ -257,7 +257,7 @@ const DEFAULT_PRODUCTS = [
     code: 'VS-SW-OS-01',
     category: 'sweatshirts',
     categoryLabel: 'Sweatshirts Collection',
-    image: 'Products/file_00000000eef87207b170ea1d1abe788b.png',
+    image: 'Shoot/Oversize Sweatshirt.png',
     fabric: 'Heavy French Terry Cotton',
     gsm: '320 / 360 GSM',
     desc: 'Relaxed oversized crewneck sweatshirt with wide drop shoulders. Side-seam ribbing panels allow maximum mobility. Crafted for high-end fashion lines.'
@@ -268,7 +268,7 @@ const DEFAULT_PRODUCTS = [
     code: 'VS-SW-RF-02',
     category: 'sweatshirts',
     categoryLabel: 'Sweatshirts Collection',
-    image: 'Products/file_00000000eef87207b170ea1d1abe788b.png',
+    image: 'Shoot/Regular Sweatshirt.png',
     fabric: 'French Terry / Fleece lining, Silicon Softened',
     gsm: '300 GSM',
     desc: 'Classic crewneck pullover with robust double-stitched collar, cuffs, and hem. Exceptionally warm and lint-free interior lining.'
@@ -281,7 +281,7 @@ const DEFAULT_PRODUCTS = [
     code: 'VS-B-SH-01',
     category: 'bottoms',
     categoryLabel: 'Shorts & Bottoms',
-    image: 'Products/WhatsApp Image 2026-05-18 at 11.12.53 AM.jpeg',
+    image: 'Shoot/Shorts.png',
     fabric: 'Heavy French Terry, Elastic Waistband',
     gsm: '280 / 320 GSM',
     desc: 'Relaxed fit fleece shorts. Features deep side pockets, a back pocket, thick waist elastic, and custom flat drawstrings. Very popular for streetwear sets.'
@@ -292,7 +292,7 @@ const DEFAULT_PRODUCTS = [
     code: 'VS-B-TP-02',
     category: 'bottoms',
     categoryLabel: 'Shorts & Bottoms',
-    image: 'Products/WhatsApp Image 2026-05-18 at 11.12.53 AM.jpeg',
+    image: 'Shoot/Track Pant.png',
     fabric: 'Polyester-Cotton Premium Interlock Knit',
     gsm: '280 GSM',
     desc: 'Athletic fit joggers featuring zipped side pockets, tailored cuffs, and excellent ventilation properties. Comfortable for active sports or daily wear.'
@@ -303,7 +303,7 @@ const DEFAULT_PRODUCTS = [
     code: 'VS-B-CP-29',
     category: 'bottoms',
     categoryLabel: 'Shorts & Bottoms',
-    image: 'Products/WhatsApp Image 2026-05-18 at 11.12.53 AM.jpeg',
+    image: 'Shoot/Comfort pant.png',
     fabric: 'Heavy French Terry, Relaxed Leg Fit',
     gsm: '300 GSM',
     desc: 'Straight-leg pants with a comfortable elastic waistband. Cozy and stylish streetwear essential, matching perfectly with oversize sweatshirts.'
@@ -314,7 +314,7 @@ const DEFAULT_PRODUCTS = [
     code: 'VS-B-BG-04',
     category: 'bottoms',
     categoryLabel: 'Shorts & Bottoms',
-    image: 'Products/WhatsApp Image 2026-05-18 at 11.12.53 AM.jpeg',
+    image: 'Shoot/Baggy Pant.png',
     fabric: 'Heavyweight Loopback French Terry',
     gsm: '340 GSM',
     desc: 'Ultra-baggy cut track pants with wide ankles. Engineered for premium streetwear labels seeking robust draping structures and comfort.'
@@ -327,7 +327,7 @@ const DEFAULT_PRODUCTS = [
     code: 'VS-BB-OS-01',
     category: 'babies',
     categoryLabel: 'Babies Collection',
-    image: 'Products/file_0000000038547207a33171f38af7da6e.png',
+    image: 'Shoot/Babies.png',
     fabric: '100% Organic Cotton, Hyper-Soft',
     gsm: '160 / 180 GSM',
     desc: 'Super-soft oversized kids t-shirt. Absolutely skin-friendly, bio-washed, and processed without harsh chemical dyes. Nickel-free shoulder button snaps.'
@@ -338,7 +338,7 @@ const DEFAULT_PRODUCTS = [
     code: 'VS-BB-PL-02',
     category: 'babies',
     categoryLabel: 'Babies Collection',
-    image: 'Products/file_0000000069e871fa9663bd972a6f3b03.png',
+    image: 'Shoot/Babies Collection.png',
     fabric: '100% Organic Pique Knit Cotton',
     gsm: '180 GSM',
     desc: 'Adorable miniature polo with dynamic contrasts on collar trims. Non-scratch soft fabric collars prevent irritation on babies neck.'
@@ -349,7 +349,7 @@ const DEFAULT_PRODUCTS = [
     code: 'VS-BB-RF-03',
     category: 'babies',
     categoryLabel: 'Babies Collection',
-    image: 'Products/file_0000000069e871fa9663bd972a6f3b03.png',
+    image: 'Shoot/Babies.png',
     fabric: '100% Organic Combed Cotton',
     gsm: '160 GSM',
     desc: 'Lightweight, ultra-breathable daily wear t-shirt. Elastic stitching enables easy pulling over babies head.'
@@ -360,7 +360,7 @@ const DEFAULT_PRODUCTS = [
     code: 'VS-BB-SH-04',
     category: 'babies',
     categoryLabel: 'Babies Collection',
-    image: 'Products/WhatsApp Image 2026-05-18 at 11.12.53 AM.jpeg',
+    image: 'Shoot/Babies Collection.png',
     fabric: '100% Soft Organic Loopback Cotton',
     gsm: '220 GSM',
     desc: 'Stretchy cotton shorts featuring extremely gentle encased elastic waistbands. Roomy diaper-friendly crotch cuts.'
@@ -371,7 +371,7 @@ const DEFAULT_PRODUCTS = [
     code: 'VS-BB-SW-05',
     category: 'babies',
     categoryLabel: 'Babies Collection',
-    image: 'Products/file_00000000eef87207b170ea1d1abe788b.png',
+    image: 'Shoot/Babies Collection.png',
     fabric: 'Organic Cotton French Terry',
     gsm: '240 GSM',
     desc: 'Charming warm crewneck sweatshirt. Soft-ribbed cuffs and neckband that stretch comfortably. Made from 100% hypoallergenic organic fabrics.'
@@ -383,10 +383,22 @@ let PRODUCTS = [];
 // Load products from localStorage or initialize with DEFAULT_PRODUCTS
 function loadProductsDatabase() {
   const stored = localStorage.getItem('velsar_products_db');
+  let useDefaults = true;
   if (stored) {
-    PRODUCTS = JSON.parse(stored);
-  } else {
-    // Add default inStock: true to each default product
+    try {
+      const parsed = JSON.parse(stored);
+      // Auto-detect and reset if the database contains old placeholder image paths
+      const hasOldImages = parsed.some(p => p.image && (p.image.startsWith('Products/file_') || p.image.startsWith('Products/WhatsApp')));
+      if (!hasOldImages) {
+        PRODUCTS = parsed;
+        useDefaults = false;
+      }
+    } catch (e) {
+      console.error("Error parsing product database:", e);
+    }
+  }
+  
+  if (useDefaults) {
     PRODUCTS = DEFAULT_PRODUCTS.map(p => ({ ...p, inStock: true }));
     localStorage.setItem('velsar_products_db', JSON.stringify(PRODUCTS));
   }
@@ -882,3 +894,51 @@ Submitted via Velsar Apparels Catalog portal.`;
   modal.classList.add('active');
   document.body.style.overflow = 'hidden';
 }
+
+// --- DYNAMIC INTERACTIVE CUSTOM CURSOR & SCROLL PROGRESS BAR ---
+document.addEventListener('DOMContentLoaded', () => {
+  // Dynamically Inject Scroll Progress Bar
+  const progressBar = document.createElement('div');
+  progressBar.className = 'scroll-progress-bar';
+  document.body.appendChild(progressBar);
+
+  window.addEventListener('scroll', () => {
+    const windowScroll = document.documentElement.scrollTop || document.body.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = height > 0 ? (windowScroll / height) * 100 : 0;
+    progressBar.style.width = scrolled + '%';
+  });
+
+  // Dynamically Inject Custom Cursor elements for desktop devices
+  if (window.innerWidth > 991) {
+    const cursorDiv = document.createElement('div');
+    cursorDiv.className = 'custom-cursor';
+    const cursorDotDiv = document.createElement('div');
+    cursorDotDiv.className = 'custom-cursor-dot';
+    document.body.appendChild(cursorDiv);
+    document.body.appendChild(cursorDotDiv);
+
+    document.addEventListener('mousemove', (e) => {
+      cursorDiv.style.left = e.clientX + 'px';
+      cursorDiv.style.top = e.clientY + 'px';
+      cursorDotDiv.style.left = e.clientX + 'px';
+      cursorDotDiv.style.top = e.clientY + 'px';
+    });
+
+    // Track all interactive hover elements dynamically
+    const addHoverEffects = () => {
+      const hoverElements = document.querySelectorAll('a, button, .btn, .collection-card, .product-card, .service-card, .print-card, .why-card, .nav-link, .logo-container, .modal-close');
+      hoverElements.forEach(el => {
+        if (!el.dataset.cursorBound) {
+          el.dataset.cursorBound = 'true';
+          el.addEventListener('mouseenter', () => cursorDiv.classList.add('hover'));
+          el.addEventListener('mouseleave', () => cursorDiv.classList.remove('hover'));
+        }
+      });
+    };
+
+    addHoverEffects();
+    // Run periodically to catch newly rendered products in the catalog
+    setInterval(addHoverEffects, 1500);
+  }
+});
