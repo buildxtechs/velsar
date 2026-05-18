@@ -109,42 +109,141 @@ ul {
   background: var(--accent);
 }
 
-/* --- PRELOADER --- */
+/* --- PRELOADER (Sewing Scissor & Fabric Split Transition) --- */
 #preloader {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: var(--primary-dark);
   z-index: 99999;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background: transparent;
+  pointer-events: none;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+.preloader-panel-left,
+.preloader-panel-right {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: var(--primary-dark);
+  z-index: -1;
+  transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1);
+  pointer-events: auto;
+}
+.preloader-panel-left {
+  left: 0;
+  border-right: 1px dashed rgba(197, 168, 128, 0.12);
+}
+.preloader-panel-right {
+  right: 0;
+  border-left: 1px dashed rgba(197, 168, 128, 0.12);
+}
+#preloader.active .preloader-panel-left {
+  transform: translateX(-100%);
+}
+#preloader.active .preloader-panel-right {
+  transform: translateX(100%);
+}
+#preloader.active {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s ease 0.4s, visibility 0.8s ease 0.4s;
+}
+
+.preloader-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   gap: 20px;
-  transition: opacity 0.6s ease, visibility 0.6s ease;
+  opacity: 1;
+  transition: opacity 0.4s ease;
+  z-index: 10;
 }
-.loader-spinner {
-  width: 50px;
-  height: 50px;
-  border: 3px solid rgba(197, 168, 128, 0.1);
-  border-top-color: var(--accent);
-  border-radius: var(--border-radius-full);
-  animation: spin 1s cubic-bezier(0.5, 0.1, 0.5, 0.9) infinite;
+#preloader.active .preloader-content {
+  opacity: 0;
 }
+
+.scissor-loader-container {
+  position: relative;
+  width: 300px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.stitch-line {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0;
+  border-top: 2.5px dashed rgba(197, 168, 128, 0.4);
+  z-index: 1;
+}
+.scissor-wrapper {
+  position: absolute;
+  left: 0;
+  z-index: 2;
+  transform: translateY(-2px);
+  animation: scissorMove 2.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+.loader-scissor-svg {
+  transform: scale(0.65);
+}
+.blade-top {
+  transform-origin: 45px 50px;
+  animation: cutTop 0.25s ease-in-out infinite alternate;
+}
+.blade-bottom {
+  transform-origin: 45px 50px;
+  animation: cutBottom 0.25s ease-in-out infinite alternate;
+}
+
+@keyframes cutTop {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(20deg); }
+}
+@keyframes cutBottom {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-20deg); }
+}
+@keyframes scissorMove {
+  0% {
+    left: -20px;
+    opacity: 0;
+  }
+  10% {
+    left: 0px;
+    opacity: 1;
+  }
+  85% {
+    left: 240px;
+    opacity: 1;
+  }
+  95% {
+    left: 280px;
+    opacity: 0;
+  }
+  100% {
+    left: -20px;
+    opacity: 0;
+  }
+}
+
 .loader-text {
   font-family: var(--font-headings);
   letter-spacing: 0.3em;
   font-weight: 300;
   text-transform: uppercase;
   color: var(--accent);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   animation: pulse 1.5s ease-in-out infinite;
-}
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
 }
 @keyframes pulse {
   0%, 100% { opacity: 0.5; }
@@ -1772,12 +1871,35 @@ textarea.form-input {
 /* --- SCROLL REVEAL ANIMATIONS (IntersectionObserver JS integration) --- */
 .reveal {
   opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+  filter: blur(4px); /* soft premium fade-in */
+  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), filter 1.2s ease;
 }
+/* 1. Default Reveal Fade-Up */
+.reveal-fade-up {
+  transform: translateY(50px);
+}
+/* 2. Slide In From Left */
+.reveal-slide-left {
+  transform: translateX(-60px) scale(0.98);
+}
+/* 3. Slide In From Right */
+.reveal-slide-right {
+  transform: translateX(60px) scale(0.98);
+}
+/* 4. Glass Scale-Up */
+.reveal-scale {
+  transform: scale(0.9) translateY(30px);
+}
+/* 5. Luxury High-Fashion Skew */
+.reveal-skew {
+  transform: skewY(2deg) translateY(60px);
+}
+
+/* Active Trigger State */
 .reveal.active {
   opacity: 1;
-  transform: translateY(0);
+  transform: translate(0) scale(1) skew(0);
+  filter: blur(0);
 }
 .reveal-delay-1 { transition-delay: 0.15s; }
 .reveal-delay-2 { transition-delay: 0.3s; }

@@ -34,8 +34,34 @@
 
   <!-- 1. FULL-SCREEN PRELOADER -->
   <div id="preloader">
-    <div class="loader-spinner"></div>
-    <div class="loader-text">Velsar Apparels</div>
+    <div class="preloader-panel-left"></div>
+    <div class="preloader-panel-right"></div>
+    <div class="preloader-content">
+      <div class="scissor-loader-container">
+        <div class="stitch-line"></div>
+        <div class="scissor-wrapper">
+          <svg class="loader-scissor-svg" viewBox="0 0 100 100" width="80" height="80">
+            <g class="scissor-group">
+              <!-- Top Blade with loop -->
+              <g class="blade-top">
+                <path d="M 10 50 L 80 40 L 90 43 L 80 46 Z" fill="var(--accent)" />
+                <circle cx="20" cy="65" r="10" stroke="var(--accent)" stroke-width="3" fill="none" />
+                <path d="M 20 55 L 10 50" stroke="var(--accent)" stroke-width="3" />
+              </g>
+              <!-- Bottom Blade with loop -->
+              <g class="blade-bottom">
+                <path d="M 10 50 L 80 60 L 90 57 L 80 54 Z" fill="var(--accent)" />
+                <circle cx="20" cy="35" r="10" stroke="var(--accent)" stroke-width="3" fill="none" />
+                <path d="M 20 45 L 10 50" stroke="var(--accent)" stroke-width="3" />
+              </g>
+              <!-- Joint screw -->
+              <circle cx="45" cy="50" r="3" fill="#fff" />
+            </g>
+          </svg>
+        </div>
+      </div>
+      <div class="loader-text">Velsar Apparels</div>
+    </div>
   </div>
 
   <!-- 2. STICKY GLASSMORPHISM NAVBAR -->
@@ -93,7 +119,7 @@
       <div class="intro-grid">
         
         <!-- Left Side Image Slideshow -->
-        <div class="intro-image-wrapper reveal" id="intro-image-container">
+        <div class="intro-image-wrapper reveal reveal-slide-left" id="intro-image-container">
           <div class="slideshow-container">
             <img class="slide-img active" src="Shoot/Fabrics.png" alt="Premium Cottons & Fabrics">
             <img class="slide-img" src="Shoot/Model 1.png" alt="Finished Streetwear Custom Apparels">
@@ -106,7 +132,7 @@
         </div>
         
         <!-- Right Side Text Content -->
-        <div class="intro-content reveal reveal-delay-2" id="intro-text-container">
+        <div class="intro-content reveal reveal-slide-right reveal-delay-2" id="intro-text-container">
           <span class="section-subtitle">Who We Are</span>
           <h2 class="intro-title" style="color: var(--text-dark);">Redefining Bulk Clothing Production</h2>
           <p class="intro-desc">
@@ -134,7 +160,7 @@
   <!-- 5. OUR COLLECTIONS SECTION -->
   <section class="section-padding" id="collections-section">
     <div class="container">
-      <div class="section-title-wrapper reveal">
+      <div class="section-title-wrapper reveal reveal-skew">
         <span class="section-subtitle">Catalog Categories</span>
         <h2 class="section-title">Our Collections</h2>
         <p class="section-desc">Explore premium apparel collections tailored for streetwear, casual wear, active lifestyle, and infant comfort.</p>
@@ -143,7 +169,7 @@
       <div class="collections-grid">
         
         <!-- T-Shirts (Wide card) -->
-        <div class="collection-card wide reveal reveal-delay-1" onclick="location.href='products.html?cat=t-shirts'" id="cat-card-tshirts">
+        <div class="collection-card wide reveal reveal-scale reveal-delay-1" onclick="location.href='products.html?cat=t-shirts'" id="cat-card-tshirts">
           <img class="collection-card-img" src="Shoot/T Shirt Collection.png" alt="T-Shirt Collection">
           <div class="collection-card-overlay">
             <h3 class="collection-card-title">T-Shirts</h3>
@@ -152,7 +178,7 @@
         </div>
         
         <!-- Hoodies -->
-        <div class="collection-card tall reveal reveal-delay-2" onclick="location.href='products.html?cat=hoodies'" id="cat-card-hoodies">
+        <div class="collection-card tall reveal reveal-scale reveal-delay-2" onclick="location.href='products.html?cat=hoodies'" id="cat-card-hoodies">
           <img class="collection-card-img" src="Shoot/Hoodies Collection.png" alt="Premium Hoodies">
           <div class="collection-card-overlay">
             <h3 class="collection-card-title">Hoodies</h3>
@@ -161,7 +187,7 @@
         </div>
         
         <!-- Sweatshirts -->
-        <div class="collection-card reveal reveal-delay-3" onclick="location.href='products.html?cat=sweatshirts'" id="cat-card-sweatshirts">
+        <div class="collection-card reveal reveal-scale reveal-delay-3" onclick="location.href='products.html?cat=sweatshirts'" id="cat-card-sweatshirts">
           <img class="collection-card-img" src="Shoot/Oversize Sweatshirt.png" alt="Crewneck Sweatshirts">
           <div class="collection-card-overlay">
             <h3 class="collection-card-title">Sweatshirts</h3>
@@ -170,7 +196,7 @@
         </div>
         
         <!-- Women's Wear -->
-        <div class="collection-card reveal reveal-delay-1" onclick="location.href='products.html?cat=women'" id="cat-card-women">
+        <div class="collection-card reveal reveal-scale reveal-delay-1" onclick="location.href='products.html?cat=women'" id="cat-card-women">
           <img class="collection-card-img" src="Shoot/Girls Collection.png" alt="Women's High Fashion">
           <div class="collection-card-overlay">
             <h3 class="collection-card-title">Women's Wear</h3>
@@ -179,7 +205,7 @@
         </div>
         
         <!-- Vest Collection -->
-        <div class="collection-card reveal reveal-delay-2" onclick="location.href='products.html?cat=vest'" id="cat-card-vest">
+        <div class="collection-card reveal reveal-scale reveal-delay-2" onclick="location.href='products.html?cat=vest'" id="cat-card-vest">
           <img class="collection-card-img" src="Shoot/Vest Collection.png" alt="Knit Athletic Vests">
           <div class="collection-card-overlay">
             <h3 class="collection-card-title">Vest Collection</h3>
@@ -188,7 +214,7 @@
         </div>
         
         <!-- Shorts & Bottoms -->
-        <div class="collection-card wide reveal reveal-delay-3" onclick="location.href='products.html?cat=bottoms'" id="cat-card-bottoms">
+        <div class="collection-card wide reveal reveal-scale reveal-delay-3" onclick="location.href='products.html?cat=bottoms'" id="cat-card-bottoms">
           <img class="collection-card-img" src="Shoot/Pant Collection.png" alt="Shorts & Bottoms">
           <div class="collection-card-overlay">
             <h3 class="collection-card-title">Shorts & Bottoms</h3>
@@ -197,7 +223,7 @@
         </div>
         
         <!-- Babies Collection (Wide card for balance) -->
-        <div class="collection-card wide reveal reveal-delay-1" onclick="location.href='products.html?cat=babies'" id="cat-card-babies">
+        <div class="collection-card wide reveal reveal-scale reveal-delay-1" onclick="location.href='products.html?cat=babies'" id="cat-card-babies">
           <img class="collection-card-img" src="Shoot/Babies Collection.png" alt="Organic Baby Apparel">
           <div class="collection-card-overlay">
             <h3 class="collection-card-title">Babies Collection</h3>
@@ -212,7 +238,7 @@
   <!-- 6. WHY VELSAR SECTION -->
   <section class="section-padding bg-light-section" id="why-velsar-section">
     <div class="container">
-      <div class="section-title-wrapper reveal">
+      <div class="section-title-wrapper reveal reveal-skew">
         <span class="section-subtitle">Manufacturing Strengths</span>
         <h2 class="section-title" style="color: var(--text-dark);">Why Velsar Apparels?</h2>
         <p class="section-desc">We combine advanced technical machinery with highly skilled craftsmanship to offer industry-leading apparel manufacturing.</p>
@@ -221,56 +247,56 @@
       <div class="why-grid">
         
         <!-- Card 1 -->
-        <div class="why-card reveal reveal-delay-1">
+        <div class="why-card reveal reveal-slide-left reveal-delay-1">
           <div class="why-icon-box"><i class="fas fa-leaf"></i></div>
           <h3 class="why-card-title">Premium Fabric Sourcing</h3>
           <p class="why-card-desc">100% organic cotton, premium carded cotton, and specialty fabric blends built for premium textures and comfort.</p>
         </div>
         
         <!-- Card 2 -->
-        <div class="why-card reveal reveal-delay-2">
+        <div class="why-card reveal reveal-slide-right reveal-delay-2">
           <div class="why-icon-box"><i class="fas fa-shield-halved"></i></div>
           <h3 class="why-card-title">Strict Quality Checks</h3>
           <p class="why-card-desc">Every piece undergoes visual audits, seam inspections, weight logs, and wash-cycle shrinking metrics.</p>
         </div>
         
         <!-- Card 3 -->
-        <div class="why-card reveal reveal-delay-3">
+        <div class="why-card reveal reveal-slide-left reveal-delay-3">
           <div class="why-icon-box"><i class="fas fa-boxes-stacked"></i></div>
           <h3 class="why-card-title">Reliable Bulk Production</h3>
           <p class="why-card-desc">Equipped to handle hundreds of thousands of pieces monthly, scaling smoothly to meet extreme bulk client demands.</p>
         </div>
         
         <!-- Card 4 -->
-        <div class="why-card reveal reveal-delay-4">
+        <div class="why-card reveal reveal-slide-right reveal-delay-4">
           <div class="why-icon-box"><i class="fas fa-tag"></i></div>
           <h3 class="why-card-title">Transparent Pricing</h3>
           <p class="why-card-desc">Direct factory costing structures. Honest metrics with no hidden fees, giving global brands real cost efficiency.</p>
         </div>
         
         <!-- Card 5 -->
-        <div class="why-card reveal reveal-delay-1">
+        <div class="why-card reveal reveal-slide-left reveal-delay-1">
           <div class="why-icon-box"><i class="far fa-clock"></i></div>
           <h3 class="why-card-title">On-Time Delivery</h3>
           <p class="why-card-desc">Highly optimized production scheduling keeps deadlines locked. Dedicated global logistics support for exports.</p>
         </div>
         
         <!-- Card 6 -->
-        <div class="why-card reveal reveal-delay-2">
+        <div class="why-card reveal reveal-slide-right reveal-delay-2">
           <div class="why-icon-box"><i class="fas fa-headset"></i></div>
           <h3 class="why-card-title">Strong Customer Support</h3>
           <p class="why-card-desc">Real-time status updates on sample approvals, production progress, and dispatch metrics via chat or call.</p>
         </div>
         
         <!-- Card 7 -->
-        <div class="why-card reveal reveal-delay-3">
+        <div class="why-card reveal reveal-slide-left reveal-delay-3">
           <div class="why-icon-box"><i class="fas fa-globe"></i></div>
           <h3 class="why-card-title">Export Capability</h3>
           <p class="why-card-desc">Export-certified processes, international customs documentation, packing compliance, and global air/ocean freight.</p>
         </div>
         
         <!-- Card 8 -->
-        <div class="why-card reveal reveal-delay-4">
+        <div class="why-card reveal reveal-slide-right reveal-delay-4">
           <div class="why-icon-box"><i class="fas fa-scissors"></i></div>
           <h3 class="why-card-title">Custom Manufacturing</h3>
           <p class="why-card-desc">From pattern drafting, special washes, and custom specs to neck tags, woven tags, and customized print designs.</p>
@@ -283,7 +309,7 @@
   <!-- 7. WHO WE WORK WITH SECTION -->
   <section class="section-padding" id="partners-section">
     <div class="container">
-      <div class="section-title-wrapper reveal">
+      <div class="section-title-wrapper reveal reveal-skew">
         <span class="section-subtitle">Target Industries</span>
         <h2 class="section-title">Who We Work With</h2>
         <p class="section-desc">We serve as the trusted backend production partner for diverse businesses globally, handling supply chains seamlessly.</p>
@@ -292,42 +318,42 @@
       <div class="client-grid">
         
         <!-- Client 1 -->
-        <div class="client-card reveal reveal-delay-1">
+        <div class="client-card reveal reveal-scale reveal-delay-1">
           <div class="client-icon"><i class="fas fa-shirt"></i></div>
           <h4 class="client-name">Fashion Startups</h4>
           <p class="client-desc">Low MOQ starting options help budding brands launch premium lines with minimal capital.</p>
         </div>
         
         <!-- Client 2 -->
-        <div class="client-card reveal reveal-delay-2">
+        <div class="client-card reveal reveal-scale reveal-delay-2">
           <div class="client-icon"><i class="fas fa-fire"></i></div>
           <h4 class="client-name">Streetwear Labels</h4>
           <p class="client-desc">Heavy GSM, drop shoulders, boxy streetwear cuts, acid wash finishes, and puff printing finishes.</p>
         </div>
         
         <!-- Client 3 -->
-        <div class="client-card reveal reveal-delay-3">
+        <div class="client-card reveal reveal-scale reveal-delay-3">
           <div class="client-icon"><i class="fas fa-briefcase"></i></div>
           <h4 class="client-name">Corporate Brands</h4>
           <p class="client-desc">High-grade customized polo t-shirts and uniforms with premium custom embroidery logos.</p>
         </div>
         
         <!-- Client 4 -->
-        <div class="client-card reveal reveal-delay-4">
+        <div class="client-card reveal reveal-scale reveal-delay-4">
           <div class="client-icon"><i class="fas fa-cart-shopping"></i></div>
           <h4 class="client-name">E-commerce Brands</h4>
           <p class="client-desc">Consistent export standards, barcode compliance, poly-bagged items ready to scan and store.</p>
         </div>
         
         <!-- Client 5 -->
-        <div class="client-card reveal reveal-delay-5">
+        <div class="client-card reveal reveal-scale reveal-delay-5">
           <div class="client-icon"><i class="fas fa-bag-shopping"></i></div>
           <h4 class="client-name">Merchandise Sellers</h4>
           <p class="client-desc">Band tees, promotional events, retail lines, and customized prints engineered for large volumes.</p>
         </div>
         
         <!-- Client 6 -->
-        <div class="client-card reveal reveal-delay-6">
+        <div class="client-card reveal reveal-scale reveal-delay-6">
           <div class="client-icon"><i class="fas fa-calendar-check"></i></div>
           <h4 class="client-name">Event Organizers</h4>
           <p class="client-desc">Short turn-around times and batch printing services for corporate marathons, music festivals, and sports events.</p>
@@ -343,31 +369,31 @@
       <div class="stats-grid">
         
         <!-- Stat 1 -->
-        <div class="stat-card reveal reveal-delay-1">
+        <div class="stat-card reveal reveal-scale reveal-delay-1">
           <div class="stat-number" data-target="50" data-suffix="+">0</div>
           <div class="stat-label">Fabric Colours</div>
         </div>
         
         <!-- Stat 2 -->
-        <div class="stat-card reveal reveal-delay-2">
+        <div class="stat-card reveal reveal-scale reveal-delay-2">
           <div class="stat-number" data-target="100" data-suffix=" pcs">0</div>
           <div class="stat-label">MOQ Starting</div>
         </div>
         
         <!-- Stat 3 -->
-        <div class="stat-card reveal reveal-delay-3">
+        <div class="stat-card reveal reveal-scale reveal-delay-3">
           <div class="stat-number" data-target="90" data-suffix="+">0</div>
           <div class="stat-label">French Terry Colours</div>
         </div>
         
         <!-- Stat 4 -->
-        <div class="stat-card reveal reveal-delay-4">
+        <div class="stat-card reveal reveal-scale reveal-delay-4">
           <div class="stat-number" data-target="100" data-suffix="%">0</div>
           <div class="stat-label">Worldwide Shipping</div>
         </div>
         
         <!-- Stat 5 -->
-        <div class="stat-card reveal reveal-delay-5">
+        <div class="stat-card reveal reveal-scale reveal-delay-5">
           <div class="stat-number" data-target="1000" data-suffix="+">0</div>
           <div class="stat-label">Bulk Orders Done</div>
         </div>
@@ -375,10 +401,10 @@
       </div>
     </div>
   </section>
-
+ 
   <!-- 9. DOWNLOAD CATALOG CTA -->
   <section class="section-padding" style="background: radial-gradient(circle at 80% 20%, rgba(197, 168, 128, 0.08) 0%, transparent 60%); text-align: center;">
-    <div class="container reveal">
+    <div class="container reveal reveal-skew">
       <h2 style="font-size: 2.5rem; color: var(--text-white); margin-bottom: 1rem;">View Our Full Export Catalog</h2>
       <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto 3rem; font-size: 1.1rem;">
         Get all color options, detailed technical specifications, packaging sizes, and bulk manufacturing terms in our official corporate document.

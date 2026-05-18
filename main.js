@@ -410,20 +410,18 @@ loadProductsDatabase();
 // --- CORE FUNCTIONALITY ON PAGE LOAD ---
 document.addEventListener('DOMContentLoaded', () => {
   
-  // 1. FADE OUT PRELOADER
+  // 1. FADE OUT PRELOADER (FABRIC SEAM SPLIT SCREEN TRANSITION)
   const preloader = document.getElementById('preloader');
   if (preloader) {
     window.addEventListener('load', () => {
       setTimeout(() => {
-        preloader.style.opacity = '0';
-        preloader.style.visibility = 'hidden';
-      }, 300);
+        preloader.classList.add('active');
+      }, 600); // 600ms delay to show the scissor cutting visual
     });
     // Fallback if load event takes too long
     setTimeout(() => {
-      preloader.style.opacity = '0';
-      preloader.style.visibility = 'hidden';
-    }, 2500);
+      preloader.classList.add('active');
+    }, 2800);
   }
 
   // 2. MOBILE NAVIGATION HAMBURGER MENU
