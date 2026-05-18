@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Products Catalog | Velsar Apparels | Bulk Fashion Production</title>
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Browse the official clothing catalog of Velsar Apparels. Featuring export quality Oversized T-Shirts, Hoodies, Sweatshirts, Knit Vests, Comfort Joggers, and Organic Babies wear. Dynamic WhatsApp bulk pricing inquiry.">
+  
+  <!-- OpenGraph Social SEO Meta Tags -->
+  <meta property="og:title" content="Our Products Catalog | Velsar Apparels | Bulk Fashion Production">
+  <meta property="og:description" content="Browse the official clothing catalog of Velsar Apparels. Featuring export quality Oversized T-Shirts, Hoodies, Sweatshirts, Knit Vests, Comfort Joggers, and Organic Babies wear.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://velsarapparels.com/products.html">
+  <meta property="og:image" content="Logo.png">
+  <meta property="og:site_name" content="Velsar Apparels">
+  <!-- Twitter Card properties -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Our Products Catalog | Velsar Apparels | Bulk Fashion Production">
+  <meta name="twitter:description" content="Browse high-end streetwear and blank apparel designs. Direct factory supply.">
+  <meta name="twitter:image" content="Logo.png">
+  
+  <link rel="icon" type="image/png" href="Logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  
+  <style>
+    /* Custom subpage hero styling */
+    .subpage-hero {
+      height: 45vh;
+      background: radial-gradient(circle at center, rgba(10, 11, 13, 0.6) 0%, rgba(10, 11, 13, 0.95) 100%), url('Work/Work.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      border-bottom: 1px solid var(--border-glass);
+      overflow: hidden;
+    }
+    .subpage-hero::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 30%;
+      background: linear-gradient(to top, var(--primary-dark) 0%, transparent 100%);
+      z-index: 1;
+    }
+    .subpage-hero-content {
+      position: relative;
+      z-index: 2;
+      padding-top: 5rem;
+    }
+    .subpage-title {
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: var(--text-white);
+      text-transform: uppercase;
+      margin-bottom: 0.8rem;
+    }
+    .subpage-subtitle {
+      font-size: 1.1rem;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. PRELOADER -->
+  <div id="preloader">
+    <div class="loader-spinner"></div>
+    <div class="loader-text">Velsar Apparels</div>
+  </div>
+
+  <!-- 2. NAVBAR -->
+  <header class="header">
+    <div class="container navbar">
+      <a href="index.html" class="logo-container" id="nav-logo-link">
+        <img class="logo-img" src="Logo.png" alt="Velsar Apparels Logo">
+        <span class="logo-text">VELSAR<span>.</span></span>
+      </a>
+      
+      <nav class="nav-menu" id="navigation-drawer">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <div class="nav-cta">
+          <a href="contact.html" class="btn btn-primary">Get Estimate</a>
+        </div>
+      </nav>
+      
+      <button class="hamburger" aria-label="Toggle Navigation menu" id="hamburger-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- 3. PRODUCTS HERO -->
+  <section class="subpage-hero" id="products-hero">
+    <div class="subpage-hero-content reveal">
+      <span class="subpage-subtitle">Manufacturing Catalog</span>
+      <h1 class="subpage-title">Export Collections</h1>
+    </div>
+  </section>
+
+  <!-- 4. PRODUCT CONTROLS (SEARCH & FILTERS) & GRID -->
+  <section class="section-padding" id="catalog-section">
+    <div class="container">
+      
+      <!-- Live Search & Category Tabs Controls -->
+      <div class="catalog-controls reveal">
+        <!-- Live Search Bar -->
+        <div class="search-wrapper">
+          <i class="fas fa-search search-icon"></i>
+          <input type="text" id="catalog-search" class="search-input" placeholder="Search product name, code, collection...">
+        </div>
+        
+        <!-- Category Filters -->
+        <div class="filter-tabs" id="catalog-filter-tabs">
+          <button class="filter-tab active" data-category="all">All</button>
+          <button class="filter-tab" data-category="t-shirts">T-Shirts</button>
+          <button class="filter-tab" data-category="hoodies">Hoodies</button>
+          <button class="filter-tab" data-category="sweatshirts">Sweatshirts</button>
+          <button class="filter-tab" data-category="women">Women</button>
+          <button class="filter-tab" data-category="vest">Vests</button>
+          <button class="filter-tab" data-category="bottoms">Bottoms</button>
+          <button class="filter-tab" data-category="babies">Babies</button>
+        </div>
+      </div>
+      
+      <!-- Dynamic Products Grid (Rendered by main.js) -->
+      <div class="products-grid" id="products-grid">
+        <!-- Rendered elements will fade in here -->
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- 5. FABRIC DETAILS SECTION -->
+  <section class="section-padding bg-light-section" id="fabric-info-section">
+    <div class="container">
+      
+      <div class="fabric-card reveal">
+        <div class="fabric-grid">
+          
+          <!-- Content Side -->
+          <div class="fabric-content-side">
+            <span class="section-subtitle" style="color: var(--accent-dark);">Advanced Fabric Selection</span>
+            <h3 style="color: var(--text-white); font-family: var(--font-headings); font-weight: 700;">Premium Materials & Specs</h3>
+            <p style="color: var(--text-muted); margin-bottom: 2rem; font-size: 1rem;">
+              We source only long-staple combed cottons, durable cotton-polyester blends, and eco-friendly organic fibers. Our materials are processed in premium dyehouses to lock in color depth and prevent pilling.
+            </p>
+            
+            <div class="fabric-types">
+              
+              <!-- Type 1 -->
+              <div class="fabric-type-item">
+                <div class="fabric-type-name" style="color: var(--text-white);">Single Jersey</div>
+                <div class="fabric-type-gsm">180 / 210 / 240 / 300 GSM</div>
+                <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 0.3rem;">Extremely breathable, bio-washed cotton. Smooth exterior ideal for clean plastisol, water-based, or screen prints.</p>
+              </div>
+              
+              <!-- Type 2 -->
+              <div class="fabric-type-item">
+                <div class="fabric-type-name" style="color: var(--text-white);">French Terry</div>
+                <div class="fabric-type-gsm">240 / 280 / 320 / 340 GSM</div>
+                <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 0.3rem;">Classic loopback design providing exceptional structural drape and heat retention. Preferred for luxury hoodies and sweatpants.</p>
+              </div>
+              
+              <!-- Type 3 -->
+              <div class="fabric-type-item">
+                <div class="fabric-type-name" style="color: var(--text-white);">Brushed Fleece</div>
+                <div class="fabric-type-gsm">300 / 360 / 400+ GSM (Super Heavyweight)</div>
+                <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 0.3rem;">Features a soft, lint-free raised nap inside. Ultra-cozy material engineered to lock shape for premium winter lines.</p>
+              </div>
+              
+            </div>
+            
+            <div class="fabric-features-list">
+              <div class="fabric-feature-item" style="color: var(--text-white);"><i class="fas fa-certificate"></i> Bio-washed Finish</div>
+              <div class="fabric-feature-item" style="color: var(--text-white);"><i class="fas fa-droplet-slash"></i> Pre-shrunk (<= 3% shrinkage)</div>
+              <div class="fabric-feature-item" style="color: var(--text-white);"><i class="fas fa-feather"></i> Hyper-Soft & Smooth</div>
+              <div class="fabric-feature-item" style="color: var(--text-white);"><i class="fas fa-shield"></i> Durable High Tensile Seams</div>
+            </div>
+          </div>
+          
+          <!-- Image Side -->
+          <div class="intro-image-wrapper" style="box-shadow: var(--shadow-strong); border-radius: var(--border-radius-lg);">
+            <img class="intro-img" src="Work/Fabric Roll.jpg" alt="Velsar Premium Fabric Sourcing & Inspection" style="height: 520px;">
+            <div class="intro-badge" style="background: rgba(10, 11, 13, 0.9);">
+              <div class="intro-badge-num">50+</div>
+              <div class="intro-badge-lbl">Jersey Colours</div>
+              <div class="intro-badge-num" style="margin-top: 1rem; font-size: 1.8rem;">90+</div>
+              <div class="intro-badge-lbl">Terry Colours</div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- 6. QUICK VIEW DYNAMIC MODAL CONTAINER -->
+  <div class="modal-overlay" id="quickview-modal">
+    <div class="modal-container">
+      
+      <button class="modal-close" aria-label="Close details popup"><i class="fas fa-times"></i></button>
+      
+      <!-- Left side image -->
+      <div class="modal-img-wrapper">
+        <img class="modal-img" src="" alt="Zoomed Product Display">
+      </div>
+      
+      <!-- Right side specifications content -->
+      <div class="modal-content">
+        <span class="modal-cat">Collection Name</span>
+        <h3 class="modal-title">Product Name</h3>
+        <span class="modal-code-badge">VS-TS-OS-01</span>
+        
+        <p class="modal-desc">
+          Detailed fashion-brand standard description about the garment, tailoring structure, seam layout, and design flexibility options will populate dynamically.
+        </p>
+        
+        <!-- Fabric technical detail rows -->
+        <div class="modal-specs">
+          <div>
+            <div class="modal-spec-label">Fabric Composition</div>
+            <div class="modal-spec-value" id="modal-spec-fabric">Single Jersey Combed Cotton</div>
+          </div>
+          <div>
+            <div class="modal-spec-label">Fabric Weight</div>
+            <div class="modal-spec-value" id="modal-spec-gsm">240 GSM Heavyweight</div>
+          </div>
+        </div>
+        
+        <!-- Inquiry actions -->
+        <div>
+          <a class="btn btn-primary modal-wa-btn" href="" target="_blank">
+            <i class="fab fa-whatsapp"></i> Inquire on WhatsApp
+          </a>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- 7. SHARED FOOTER -->
+  <footer class="footer">
+    <div class="container footer-top">
+      <div class="footer-grid">
+        
+        <!-- Col 1: Brand Info -->
+        <div class="footer-about">
+          <a href="index.html" class="footer-logo-container">
+            <img class="footer-logo-img" src="Logo.png" alt="Velsar Footer Logo">
+            <span class="footer-logo-text">VELSAR<span>.</span></span>
+          </a>
+          <p class="footer-desc">
+            “Premium Comfort. Timeless Style.”<br>
+            Leading premium apparel and t-shirt manufacturer from Tiruppur, India. Delivering bespoke export quality clothing worldwide.
+          </p>
+          <div class="social-links">
+            <a class="social-icon" href="https://instagram.com" target="_blank" aria-label="Instagram profile"><i class="fab fa-instagram"></i></a>
+            <a class="social-icon" href="https://facebook.com" target="_blank" aria-label="Facebook page"><i class="fab fa-facebook-f"></i></a>
+            <a class="social-icon" href="https://wa.me/918248197416" target="_blank" aria-label="WhatsApp chat"><i class="fab fa-whatsapp"></i></a>
+            <a class="social-icon" href="https://youtube.com" target="_blank" aria-label="YouTube channel"><i class="fab fa-youtube"></i></a>
+            <a class="social-icon" href="https://linkedin.com" target="_blank" aria-label="LinkedIn page"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        
+        <!-- Col 2: Navigation Links -->
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About Velsar</a></li>
+            <li><a href="products.html" class="footer-link">Products Catalog</a></li>
+            <li><a href="services.html" class="footer-link">Manufacturing Services</a></li>
+            <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+          </ul>
+        </div>
+        
+        <!-- Col 3: Collections links -->
+        <div>
+          <h4 class="footer-title">Collections</h4>
+          <ul class="footer-links">
+            <li><a href="products.html?cat=t-shirts" class="footer-link">T-Shirts Collection</a></li>
+            <li><a href="products.html?cat=hoodies" class="footer-link">Hoodies & Sweatshirts</a></li>
+            <li><a href="products.html?cat=women" class="footer-link">Women's Streetwear</a></li>
+            <li><a href="products.html?cat=vest" class="footer-link">Ribbed Vests</a></li>
+            <li><a href="products.html?cat=bottoms" class="footer-link">Shorts & Bottoms</a></li>
+            <li><a href="products.html?cat=babies" class="footer-link">Babies & Kids Wear</a></li>
+          </ul>
+        </div>
+        
+        <!-- Col 4: Contact details -->
+        <div>
+          <h4 class="footer-title">Factory Details</h4>
+          <div class="footer-contact-item">
+            <i class="fas fa-location-dot"></i>
+            <span>VELSAR APPARELS,<br>Tiruppur, Tamil Nadu, India</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:velsarapparels@gmail.com" style="color: inherit; word-break: break-all;">velsarapparels@gmail.com</a>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-phone"></i>
+            <span>+91 82481 97416<br>+91 63836 27269</span>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="container footer-bottom-flex">
+        <p>&copy; 2026 Velsar Apparels. All rights reserved. Designed for export excellence.</p>
+        <p>Premium Comfort. Timeless Style.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 8. SCROLL-TO-TOP -->
+  <a class="scroll-top-btn" href="#top" aria-label="Scroll back to top" id="scroll-to-top-button">
+    <i class="fas fa-chevron-up"></i>
+  </a>
+
+  <!-- Main JavaScript File -->
+  <script src="main.js"></script>
+
+  <!-- Inline URL Search Params parsing to automatically set active category tab -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const catParam = urlParams.get('cat');
+      
+      if (catParam) {
+        // Find matching filter tab button
+        const tabs = document.querySelectorAll('.filter-tab');
+        let matchedTab = null;
+        
+        tabs.forEach(tab => {
+          if (tab.getAttribute('data-category') === catParam) {
+            matchedTab = tab;
+          }
+        });
+        
+        if (matchedTab) {
+          // Trigger click on matched tab to filter products dynamically
+          setTimeout(() => {
+            matchedTab.click();
+            // Scroll smoothly down to the catalog section
+            const catalogSec = document.getElementById('catalog-section');
+            if (catalogSec) {
+              catalogSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }, 400);
+        }
+      }
+    });
+  </script>
+</body>
+</html>
