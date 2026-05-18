@@ -413,6 +413,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // 1. FADE OUT PRELOADER (FABRIC SEAM SPLIT SCREEN TRANSITION)
   const preloader = document.getElementById('preloader');
   if (preloader) {
+    // 50% chance criss-cross, 50% curtains
+    const preloaderStyle = Math.random() > 0.5 ? 'style-crisscross' : 'style-curtains';
+    preloader.classList.add(preloaderStyle);
+
     window.addEventListener('load', () => {
       setTimeout(() => {
         preloader.classList.add('active');
