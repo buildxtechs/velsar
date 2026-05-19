@@ -2247,3 +2247,76 @@ textarea.form-input {
   }
 }
 
+/* --- INTEGRATED FACTORY WORKFLOW TIMELINE --- */
+.workflow-stepper-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  margin-top: 4rem;
+}
+.workflow-step-card {
+  background: var(--secondary-dark);
+  border: 1px solid var(--border-glass);
+  padding: 3rem 2rem 2.5rem;
+  border-radius: var(--border-radius-md);
+  position: relative;
+  transition: var(--transition-smooth);
+  box-shadow: var(--shadow-subtle);
+  overflow: hidden;
+}
+.workflow-step-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent);
+  box-shadow: var(--shadow-glow);
+}
+.workflow-step-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  background: var(--tertiary-dark);
+  color: var(--accent);
+  font-family: var(--font-headings);
+  font-weight: 800;
+  font-size: 0.9rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: var(--border-radius-sm);
+  border: 1px solid var(--border-glass);
+}
+.workflow-step-icon {
+  font-size: 2.5rem;
+  color: var(--text-white);
+  margin-bottom: 1.5rem;
+  opacity: 0.85;
+  transition: var(--transition-fast);
+}
+.workflow-step-card:hover .workflow-step-icon {
+  color: var(--accent);
+  transform: scale(1.1) rotate(5deg);
+}
+.workflow-step-title {
+  font-family: var(--font-headings);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-white);
+  margin-bottom: 1rem;
+}
+.workflow-step-desc {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 991px) {
+  .workflow-stepper-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+@media (max-width: 600px) {
+  .workflow-stepper-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+

@@ -327,7 +327,7 @@ const DEFAULT_PRODUCTS = [
     code: 'VS-BB-OS-01',
     category: 'babies',
     categoryLabel: 'Babies Collection',
-    image: 'Shoot/Babies.png',
+    image: 'Shoot/babies_oversized_tshirt.png',
     fabric: '100% Organic Cotton, Hyper-Soft',
     gsm: '160 / 180 GSM',
     desc: 'Super-soft oversized kids t-shirt. Absolutely skin-friendly, bio-washed, and processed without harsh chemical dyes. Nickel-free shoulder button snaps.'
@@ -338,7 +338,7 @@ const DEFAULT_PRODUCTS = [
     code: 'VS-BB-PL-02',
     category: 'babies',
     categoryLabel: 'Babies Collection',
-    image: 'Shoot/Babies Collection.png',
+    image: 'Shoot/babies_polo_tshirt.png',
     fabric: '100% Organic Pique Knit Cotton',
     gsm: '180 GSM',
     desc: 'Adorable miniature polo with dynamic contrasts on collar trims. Non-scratch soft fabric collars prevent irritation on babies neck.'
@@ -349,7 +349,7 @@ const DEFAULT_PRODUCTS = [
     code: 'VS-BB-RF-03',
     category: 'babies',
     categoryLabel: 'Babies Collection',
-    image: 'Shoot/Babies.png',
+    image: 'Shoot/babies_regular_tshirt.png',
     fabric: '100% Organic Combed Cotton',
     gsm: '160 GSM',
     desc: 'Lightweight, ultra-breathable daily wear t-shirt. Elastic stitching enables easy pulling over babies head.'
@@ -360,7 +360,7 @@ const DEFAULT_PRODUCTS = [
     code: 'VS-BB-SH-04',
     category: 'babies',
     categoryLabel: 'Babies Collection',
-    image: 'Shoot/Babies Collection.png',
+    image: 'Shoot/babies_shorts.png',
     fabric: '100% Soft Organic Loopback Cotton',
     gsm: '220 GSM',
     desc: 'Stretchy cotton shorts featuring extremely gentle encased elastic waistbands. Roomy diaper-friendly crotch cuts.'
@@ -371,7 +371,7 @@ const DEFAULT_PRODUCTS = [
     code: 'VS-BB-SW-05',
     category: 'babies',
     categoryLabel: 'Babies Collection',
-    image: 'Shoot/Babies Collection.png',
+    image: 'Shoot/babies_sweatshirt.png',
     fabric: 'Organic Cotton French Terry',
     gsm: '240 GSM',
     desc: 'Charming warm crewneck sweatshirt. Soft-ribbed cuffs and neckband that stretch comfortably. Made from 100% hypoallergenic organic fabrics.'
@@ -387,8 +387,8 @@ function loadProductsDatabase() {
   if (stored) {
     try {
       const parsed = JSON.parse(stored);
-      // Auto-detect and reset if the database contains old placeholder image paths
-      const hasOldImages = parsed.some(p => p.image && (p.image.startsWith('Products/file_') || p.image.startsWith('Products/WhatsApp')));
+      // Auto-detect and reset if the database contains old placeholder image paths or old babies images
+      const hasOldImages = parsed.some(p => p.image && (p.image.startsWith('Products/file_') || p.image.startsWith('Products/WhatsApp') || p.image.includes('Shoot/Babies')));
       if (!hasOldImages) {
         PRODUCTS = parsed;
         useDefaults = false;
@@ -699,7 +699,7 @@ function setupFilters() {
 
 // --- GENERATE WHATSAPP INQUIRY URL ---
 function generateWhatsAppLink(product) {
-  const phone = '918248197416';
+  const phone = '918903511200';
   const text = `Hello Velsar Apparels,%20I%20am%20interested%20in%20the%20following%20product%20from%20your%20manufactured%20catalog:%0A%0A👕%20*Product%20Name:*%20${encodeURIComponent(product.name)}%0A📦%20*Product%20Code:*%20${encodeURIComponent(product.code)}%0A📂%20*Collection:*%20${encodeURIComponent(product.categoryLabel)}%0A🧵%20*Fabric%20Type:*%20${encodeURIComponent(product.fabric)}%20(${encodeURIComponent(product.gsm)})%0A%0APlease%20provide%20bulk%20pricing%20estimates,%20MOQs,%20and%20color%20charts%20for%20this%20design.`;
   return `https://wa.me/${phone}?text=${text}`;
 }
@@ -851,7 +851,7 @@ function openContactDeliveryModal(formData) {
   // WhatsApp Action
   if (waBtn) {
     waBtn.onclick = () => {
-      const phone = '918248197416';
+      const phone = '918903511200';
       const text = `Hello Velsar Apparels,%0A%0A*B2B Bulk Factory Inquiry* from our website:%0A%0A👤 *Contact Name:* ${encodeURIComponent(formData.name)}%0A🏢 *Company/Brand:* ${encodeURIComponent(formData.company)}%0A📞 *Phone/WhatsApp:* ${encodeURIComponent(formData.phone)}%0A✉️ *Email:* ${encodeURIComponent(formData.email)}%0A%0A📝 *Specifications & Inquiry Details:*%0A${encodeURIComponent(formData.msg)}`;
       window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
       
