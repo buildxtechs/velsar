@@ -703,7 +703,7 @@ ul {
   -webkit-text-fill-color: transparent;
   display: inline-block;
   position: relative;
-  text-shadow: 0 0 40px rgba(197, 168, 128, 0.2);
+  filter: drop-shadow(0 0 30px rgba(197, 168, 128, 0.25));
 }
 .hero-desc {
   font-size: 1.25rem;
