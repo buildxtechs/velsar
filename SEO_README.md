@@ -92,8 +92,8 @@ To maintain and expand your search engine positioning, adhere to the following t
      },
      "geo": {
        "@type": "GeoCoordinates",
-       "latitude": 11.108889,
-       "longitude": 77.301390
+       "latitude": 11.115169,
+       "longitude": 77.323784
      },
      "openingHoursSpecification": {
        "@type": "OpeningHoursSpecification",
