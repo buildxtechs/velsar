@@ -413,19 +413,215 @@ document.addEventListener('DOMContentLoaded', () => {
   // 1. FADE OUT PRELOADER (FABRIC SEAM SPLIT SCREEN TRANSITION)
   const preloader = document.getElementById('preloader');
   if (preloader) {
-    // 50% chance criss-cross, 50% curtains
-    const preloaderStyle = Math.random() > 0.5 ? 'style-crisscross' : 'style-curtains';
-    preloader.classList.add(preloaderStyle);
-
-    window.addEventListener('load', () => {
-      setTimeout(() => {
-        preloader.classList.add('active');
-      }, 600); // 600ms delay to show the scissor cutting visual
-    });
-    // Fallback if load event takes too long
-    setTimeout(() => {
+    // 1. Session check to skip intro on subsequent pages
+    if (sessionStorage.getItem('velsar_intro_viewed') === 'true') {
+      preloader.style.display = 'none';
       preloader.classList.add('active');
-    }, 2800);
+    } else {
+      // 50% chance criss-cross, 50% curtains
+      const preloaderStyle = Math.random() > 0.5 ? 'style-crisscross' : 'style-curtains';
+      preloader.classList.add(preloaderStyle);
+
+      // Dynamic loader markup injection
+      const preloaderContent = preloader.querySelector('.preloader-content');
+      if (preloaderContent) {
+        const mode = Math.random() > 0.5 ? 'needle' : 'scissor';
+        
+        if (mode === 'scissor') {
+          preloaderContent.innerHTML = `
+            <button class="skip-intro-btn" id="skip-intro-trigger">Skip Intro ✕</button>
+            <div class="scissor-loader-container interactive" id="preloader-track">
+              <div class="stitch-line"></div>
+              <div class="scissor-wrapper interactive" id="preloader-handle">
+                <svg class="loader-scissor-svg" viewBox="0 0 100 100" width="80" height="80">
+                  <g class="scissor-group">
+                    <g class="blade-top">
+                      <path d="M 10 50 L 80 40 L 90 43 L 80 46 Z" fill="var(--accent)" />
+                      <circle cx="20" cy="65" r="10" stroke="var(--accent)" stroke-width="3" fill="none" />
+                      <path d="M 20 55 L 10 50" stroke="var(--accent)" stroke-width="3" />
+                    </g>
+                    <g class="blade-bottom">
+                      <path d="M 10 50 L 80 60 L 90 57 L 80 54 Z" fill="var(--accent)" />
+                      <circle cx="20" cy="35" r="10" stroke="var(--accent)" stroke-width="3" fill="none" />
+                      <path d="M 20 45 L 10 50" stroke="var(--accent)" stroke-width="3" />
+                    </g>
+                    <circle cx="45" cy="50" r="3" fill="#fff" />
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="preloader-interactive-prompt">
+              Slide Scissors to Cut Seam <i class="fas fa-arrow-right"></i>
+            </div>
+          `;
+        } else {
+          preloaderContent.innerHTML = `
+            <button class="skip-intro-btn" id="skip-intro-trigger">Skip Intro ✕</button>
+            <div class="textile-loader-container interactive" id="preloader-track">
+              <div class="spool-wrapper">
+                <svg class="loader-spool-svg" viewBox="0 0 100 100" width="80" height="80">
+                  <path d="M 20 20 L 80 20 L 70 28 L 30 28 Z" fill="var(--accent)" opacity="0.85" />
+                  <path d="M 30 72 L 70 72 L 80 80 L 20 80 Z" fill="var(--accent)" opacity="0.85" />
+                  <rect x="42" y="25" width="16" height="52" fill="var(--accent-dark)" />
+                  <g class="yarn-windings">
+                    <rect x="30" y="28" width="40" height="44" rx="6" fill="var(--accent)" />
+                    <line x1="31" y1="34" x2="69" y2="34" stroke="var(--primary-dark)" stroke-width="2" opacity="0.3" />
+                    <line x1="30" y1="40" x2="70" y2="40" stroke="var(--primary-dark)" stroke-width="2" opacity="0.3" />
+                    <line x1="30" y1="46" x2="70" y2="46" stroke="var(--primary-dark)" stroke-width="2" opacity="0.3" />
+                    <line x1="30" y1="52" x2="70" y2="52" stroke="var(--primary-dark)" stroke-width="2" opacity="0.3" />
+                    <line x1="30" y1="58" x2="70" y2="58" stroke="var(--primary-dark)" stroke-width="2" opacity="0.3" />
+                    <line x1="30" y1="64" x2="70" y2="64" stroke="var(--primary-dark)" stroke-width="2" opacity="0.3" />
+                    <line x1="31" y1="70" x2="69" y2="70" stroke="var(--primary-dark)" stroke-width="2" opacity="0.3" />
+                  </g>
+                  <rect x="47" y="15" width="6" height="70" fill="var(--accent-light)" opacity="0.5" />
+                </svg>
+              </div>
+              <div class="thread-wave-container interactive" id="thread-wave">
+                <svg class="loader-thread-svg" viewBox="0 0 200 100" width="140" height="70">
+                  <path class="thread-line" d="M 0 50 Q 25 15, 50 50 T 100 50 T 150 50 T 200 50" fill="none" stroke="var(--accent)" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="10 8" />
+                </svg>
+                <div class="fabric-base-line"></div>
+              </div>
+              <div class="needle-wrapper interactive" id="preloader-handle">
+                <svg class="loader-needle-svg" viewBox="0 0 40 120" width="30" height="90">
+                  <path d="M 17 5 L 23 5 L 22 85 L 20 115 L 18 85 Z" fill="var(--accent-light)" />
+                  <ellipse cx="20" cy="20" rx="1.5" ry="6" fill="var(--primary-dark)" />
+                  <path d="M 8 20 Q 20 18 20 20 Q 20 22 32 32" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" />
+                </svg>
+              </div>
+            </div>
+            <div class="preloader-interactive-prompt">
+              Slide Needle to Stitch Enter <i class="fas fa-arrow-right"></i>
+            </div>
+          `;
+        }
+
+        // Setup Interactive Drag Engine
+        const handle = document.getElementById('preloader-handle');
+        const track = document.getElementById('preloader-track');
+        const threadWave = document.getElementById('thread-wave');
+        const skipBtn = document.getElementById('skip-intro-trigger');
+
+        let isDragging = false;
+        let startX = 0;
+        let startLeft = 0;
+        const startOffset = mode === 'scissor' ? 0 : 95;
+        const endOffset = mode === 'scissor' ? 240 : 295;
+        const travelRange = endOffset - startOffset;
+
+        const dismissIntro = () => {
+          sessionStorage.setItem('velsar_intro_viewed', 'true');
+          preloader.classList.remove('dragging');
+          preloader.classList.add('active');
+          document.removeEventListener('mousemove', onMouseMove);
+          document.removeEventListener('mouseup', onMouseUp);
+          document.removeEventListener('touchmove', onTouchMove);
+          document.removeEventListener('touchend', onTouchEnd);
+        };
+
+        if (skipBtn) {
+          skipBtn.addEventListener('click', dismissIntro);
+        }
+
+        const onDragStart = (clientX) => {
+          isDragging = true;
+          startX = clientX;
+          const curLeft = parseFloat(handle.style.left) || startOffset;
+          startLeft = curLeft;
+          
+          handle.classList.add('dragging');
+          handle.classList.add('moving');
+          preloader.classList.add('dragging');
+        };
+
+        const onDragMove = (clientX) => {
+          if (!isDragging) return;
+          const deltaX = clientX - startX;
+          let newLeft = startLeft + deltaX;
+
+          if (newLeft < startOffset) newLeft = startOffset;
+          if (newLeft > endOffset) newLeft = endOffset;
+
+          handle.style.left = `${newLeft}px`;
+
+          const progress = (newLeft - startOffset) / travelRange;
+          preloader.style.setProperty('--drag-progress', progress);
+
+          if (mode === 'needle' && threadWave) {
+            threadWave.style.width = `${progress * 145}px`;
+          }
+
+          // Complete if past 92% of the slider track
+          if (progress >= 0.92) {
+            isDragging = false;
+            handle.classList.remove('dragging');
+            handle.classList.remove('moving');
+            handle.style.left = `${endOffset}px`;
+            if (mode === 'needle' && threadWave) {
+              threadWave.style.width = `145px`;
+            }
+            preloader.style.setProperty('--drag-progress', 1.0);
+            dismissIntro();
+          }
+        };
+
+        const onDragEnd = () => {
+          if (!isDragging) return;
+          isDragging = false;
+          handle.classList.remove('dragging');
+          handle.classList.remove('moving');
+          preloader.classList.remove('dragging');
+
+          // Snap back to starting position if not finished
+          handle.style.left = `${startOffset}px`;
+          preloader.style.setProperty('--drag-progress', 0.0);
+          if (mode === 'needle' && threadWave) {
+            threadWave.style.width = `0px`;
+          }
+        };
+
+        // Mouse Listeners
+        handle.addEventListener('mousedown', (e) => {
+          e.preventDefault();
+          onDragStart(e.clientX);
+          document.addEventListener('mousemove', onMouseMove);
+          document.addEventListener('mouseup', onMouseUp);
+        });
+
+        const onMouseMove = (e) => {
+          onDragMove(e.clientX);
+        };
+
+        const onMouseUp = () => {
+          onDragEnd();
+        };
+
+        // Touch Listeners (Mobile compatibility)
+        handle.addEventListener('touchstart', (e) => {
+          onDragStart(e.touches[0].clientX);
+          document.addEventListener('touchmove', onTouchMove, { passive: false });
+          document.addEventListener('touchend', onTouchEnd);
+        });
+
+        const onTouchMove = (e) => {
+          if (isDragging) {
+            e.preventDefault(); // Stop mobile scroll bounce during slider drag
+          }
+          onDragMove(e.touches[0].clientX);
+        };
+
+        const onTouchEnd = () => {
+          onDragEnd();
+        };
+
+        // Fallback: Skip automatically after 6 seconds of inactivity to protect usability/SEO
+        setTimeout(() => {
+          if (preloader && !preloader.classList.contains('active')) {
+            dismissIntro();
+          }
+        }, 6000);
+      }
+    }
   }
 
   // 2. MOBILE NAVIGATION HAMBURGER MENU
