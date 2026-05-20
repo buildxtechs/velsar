@@ -2644,3 +2644,371 @@ textarea.form-input {
     font-size: 1.6rem;
   }
 }
+
+/* ==========================================================================
+   14. FABRICS SHOWCASE & TIMELINE STYLING
+   ========================================================================== */
+
+/* Custom workflow timeline cards */
+.workflow-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin-top: 3rem;
+}
+.workflow-timeline-card {
+  background: var(--secondary-dark);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--border-radius-lg);
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  transition: var(--transition-smooth);
+}
+.workflow-timeline-card:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-5px);
+}
+.workflow-timeline-card:nth-child(even) {
+  grid-template-columns: 1fr 1.2fr;
+}
+.workflow-timeline-card:nth-child(even) .workflow-image-wrapper {
+  order: 2;
+}
+
+.workflow-image-wrapper {
+  position: relative;
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  height: 380px;
+  background: #191B1F;
+  box-shadow: var(--shadow-strong);
+}
+.workflow-img-primary {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.workflow-img-details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  pointer-events: none;
+}
+.workflow-image-wrapper:hover .workflow-img-primary {
+  opacity: 0;
+  transform: scale(1.05);
+}
+.workflow-image-wrapper:hover .workflow-img-details {
+  opacity: 1;
+  transform: scale(1.05);
+  pointer-events: auto;
+}
+/* Mobile toggle overlay hint */
+.workflow-inspect-badge {
+  position: absolute;
+  bottom: 1.2rem;
+  right: 1.2rem;
+  background: rgba(10, 11, 13, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 10;
+  pointer-events: none;
+  transition: var(--transition-fast);
+}
+.workflow-image-wrapper:hover .workflow-inspect-badge {
+  background: var(--accent);
+  color: var(--primary-dark);
+  box-shadow: 0 0 15px rgba(197, 168, 128, 0.5);
+}
+
+.workflow-info-side h3 {
+  font-size: 2.2rem;
+  color: var(--text-white);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.workflow-info-side h3 span {
+  font-size: 1.5rem;
+  color: var(--accent);
+  font-weight: 300;
+}
+.workflow-info-side p {
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+.workflow-specs-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+.workflow-spec-item {
+  border-left: 2px solid var(--accent);
+  padding-left: 1.2rem;
+}
+.workflow-spec-name {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.2rem;
+}
+.workflow-spec-val {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-white);
+}
+
+/* Fabrics Grid Styles */
+.fabrics-grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+.fabric-grid-card {
+  background: var(--secondary-dark);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--border-radius-md);
+  padding: 2.5rem;
+  transition: var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.fabric-grid-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent);
+  box-shadow: var(--shadow-glow);
+}
+.fabric-card-header {
+  border-bottom: 1px solid var(--border-glass);
+  padding-bottom: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+.fabric-card-title {
+  font-family: var(--font-headings);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-white);
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+  height: 48px; /* Fixed height for header symmetry */
+  display: flex;
+  align-items: center;
+}
+.fabric-card-spec-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  margin-bottom: 0.6rem;
+}
+.fabric-spec-label {
+  color: var(--text-muted);
+}
+.fabric-spec-value {
+  color: var(--text-white);
+  font-weight: 600;
+}
+.fabric-card-specs {
+  margin-bottom: 1.8rem;
+}
+.fabric-card-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: rgba(197, 168, 128, 0.05);
+  border: 1px solid rgba(197, 168, 128, 0.2);
+  padding: 0.3rem 0.6rem;
+  border-radius: var(--border-radius-sm);
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.05em;
+}
+.fabric-action-btn {
+  width: 100%;
+  text-align: center;
+  font-size: 0.85rem;
+  padding: 0.8rem 1.2rem;
+}
+
+/* Color Chart Downloads styles */
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.chart-download-card {
+  background: rgba(197, 168, 128, 0.02);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--border-radius-md);
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  transition: var(--transition-smooth);
+}
+.chart-download-card:hover {
+  background: rgba(197, 168, 128, 0.05);
+  border-color: var(--accent);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+.chart-icon-box {
+  width: 50px;
+  height: 50px;
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+.chart-info h4 {
+  font-size: 0.95rem;
+  color: var(--text-white);
+  margin-bottom: 0.25rem;
+}
+.chart-info p {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-bottom: 0.8rem;
+}
+.chart-link {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: var(--transition-fast);
+}
+.chart-link:hover {
+  color: var(--text-white);
+  transform: translateX(3px);
+}
+
+/* Fabrics MOQ guidelines */
+.moq-guidelines-banner {
+  background: linear-gradient(135deg, rgba(197, 168, 128, 0.05) 0%, rgba(10, 11, 13, 0.2) 100%);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--border-radius-lg);
+  padding: 4rem;
+  margin-top: 5rem;
+}
+.moq-banner-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+.moq-banner-left h3 {
+  font-size: 2.2rem;
+  color: var(--text-white);
+  margin-bottom: 1.5rem;
+}
+.moq-banner-left p {
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+.moq-badge-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.moq-banner-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background: rgba(10, 11, 13, 0.6);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--border-radius-md);
+  padding: 2.5rem;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.moq-highlight-number {
+  font-family: var(--font-headings);
+  font-size: 3rem;
+  color: var(--accent);
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+.moq-highlight-label {
+  font-size: 0.9rem;
+  color: var(--text-white);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Responsive adjustments for Fabric Page */
+@media (max-width: 991px) {
+  .workflow-timeline-card,
+  .workflow-timeline-card:nth-child(even) {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 2rem;
+  }
+  .workflow-timeline-card:nth-child(even) .workflow-image-wrapper {
+    order: 0;
+  }
+  .fabrics-grid-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .charts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .moq-banner-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .moq-guidelines-banner {
+    padding: 2.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .fabrics-grid-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+  .workflow-image-wrapper {
+    height: 280px;
+  }
+  .workflow-info-side h3 {
+    font-size: 1.8rem;
+  }
+}
