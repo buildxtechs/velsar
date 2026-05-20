@@ -136,107 +136,198 @@ ul {
   pointer-events: auto;
 }
 
-/* CURTAINS STYLE (Horizontal Seam Split) */
-#preloader.style-curtains .p-top-left {
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 100%;
-  border-right: 1px dashed rgba(197, 168, 128, 0.12);
+/* 1. 3D ORIGAMI FABRIC GATE FOLD (style-origami) */
+#preloader.style-origami {
+  perspective: 1500px;
 }
-#preloader.style-curtains .p-top-right {
-  top: 0;
-  right: 0;
-  width: 50%;
-  height: 100%;
-  border-left: 1px dashed rgba(197, 168, 128, 0.12);
-}
-#preloader.style-curtains .p-bottom-left,
-#preloader.style-curtains .p-bottom-right {
-  display: none;
-}
-
-/* Curtains Dismissal */
-#preloader.style-curtains.active .p-top-left {
-  transform: translateX(-100%);
-}
-#preloader.style-curtains.active .p-top-right {
-  transform: translateX(100%);
-}
-
-/* CRISS-CROSS STYLE (Diagonal Cutting Shear Split) */
-#preloader.style-crisscross .p-top-left {
-  top: 0;
-  left: 0;
+#preloader.style-origami .preloader-panel {
   width: 50%;
   height: 50%;
-  border-right: 1px dashed rgba(197, 168, 128, 0.12);
-  border-bottom: 1px dashed rgba(197, 168, 128, 0.12);
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.8) inset;
+  transition: transform 1.5s cubic-bezier(0.25, 1, 0.5, 1), opacity 1.3s ease, filter 1.3s ease;
 }
-#preloader.style-crisscross .p-top-right {
+#preloader.style-origami .p-top-left {
+  top: 0;
+  left: 0;
+  transform-origin: left center;
+  border-right: 1px dashed rgba(197, 168, 128, 0.15);
+  border-bottom: 1px dashed rgba(197, 168, 128, 0.15);
+}
+#preloader.style-origami .p-top-right {
   top: 0;
   right: 0;
-  width: 50%;
-  height: 50%;
-  border-left: 1px dashed rgba(197, 168, 128, 0.12);
-  border-bottom: 1px dashed rgba(197, 168, 128, 0.12);
+  transform-origin: right center;
+  border-left: 1px dashed rgba(197, 168, 128, 0.15);
+  border-bottom: 1px dashed rgba(197, 168, 128, 0.15);
 }
-#preloader.style-crisscross .p-bottom-left {
+#preloader.style-origami .p-bottom-left {
   bottom: 0;
   left: 0;
-  width: 50%;
-  height: 50%;
-  border-right: 1px dashed rgba(197, 168, 128, 0.12);
-  border-top: 1px dashed rgba(197, 168, 128, 0.12);
+  transform-origin: left center;
+  border-right: 1px dashed rgba(197, 168, 128, 0.15);
+  border-top: 1px dashed rgba(197, 168, 128, 0.15);
 }
-#preloader.style-crisscross .p-bottom-right {
+#preloader.style-origami .p-bottom-right {
   bottom: 0;
   right: 0;
+  transform-origin: right center;
+  border-left: 1px dashed rgba(197, 168, 128, 0.15);
+  border-top: 1px dashed rgba(197, 168, 128, 0.15);
+}
+
+/* Origami Active Dismissal - dynamic folding fabric gate */
+#preloader.style-origami.active .p-top-left,
+#preloader.style-origami.active .p-bottom-left {
+  transform: rotateY(-95deg) scaleX(0.8) skewY(3deg);
+  opacity: 0;
+  filter: brightness(0.2) blur(3px);
+}
+#preloader.style-origami.active .p-top-right,
+#preloader.style-origami.active .p-bottom-right {
+  transform: rotateY(95deg) scaleX(0.8) skewY(-3deg);
+  opacity: 0;
+  filter: brightness(0.2) blur(3px);
+}
+
+/* Origami Dragging State */
+#preloader.style-origami.dragging .p-top-left,
+#preloader.style-origami.dragging .p-bottom-left {
+  transform: rotateY(calc(var(--drag-progress) * -95deg)) scaleX(calc(1 - var(--drag-progress) * 0.2)) skewY(calc(var(--drag-progress) * 3deg));
+  transition: none;
+}
+#preloader.style-origami.dragging .p-top-right,
+#preloader.style-origami.dragging .p-bottom-right {
+  transform: rotateY(calc(var(--drag-progress) * 95deg)) scaleX(calc(1 - var(--drag-progress) * 0.2)) skewY(calc(var(--drag-progress) * -3deg));
+  transition: none;
+}
+
+/* 2. DYNAMIC HIGH-TENSION FABRIC SPLIT (style-elastic-peel) */
+#preloader.style-elastic-peel .preloader-panel {
   width: 50%;
   height: 50%;
-  border-left: 1px dashed rgba(197, 168, 128, 0.12);
-  border-top: 1px dashed rgba(197, 168, 128, 0.12);
+  transition: transform 1.6s cubic-bezier(0.68, -0.6, 0.27, 1.55), filter 1.4s ease;
+}
+#preloader.style-elastic-peel .p-top-left {
+  top: 0;
+  left: 0;
+  border-right: 1px dashed rgba(197, 168, 128, 0.15);
+  border-bottom: 1px dashed rgba(197, 168, 128, 0.15);
+}
+#preloader.style-elastic-peel .p-top-right {
+  top: 0;
+  right: 0;
+  border-left: 1px dashed rgba(197, 168, 128, 0.15);
+  border-bottom: 1px dashed rgba(197, 168, 128, 0.15);
+}
+#preloader.style-elastic-peel .p-bottom-left {
+  bottom: 0;
+  left: 0;
+  border-right: 1px dashed rgba(197, 168, 128, 0.15);
+  border-top: 1px dashed rgba(197, 168, 128, 0.15);
+}
+#preloader.style-elastic-peel .p-bottom-right {
+  bottom: 0;
+  right: 0;
+  border-left: 1px dashed rgba(197, 168, 128, 0.15);
+  border-top: 1px dashed rgba(197, 168, 128, 0.15);
 }
 
-/* Criss-Cross Dismissal (Slides outwards diagonally with scissor shear tilt!) */
-#preloader.style-crisscross.active .p-top-left {
-  transform: translate(-100%, -100%) rotate(-5deg);
+/* Elastic Split - pulls to corners with spring-like snap skew */
+#preloader.style-elastic-peel.active .p-top-left {
+  transform: translate(-100%, -50%) skewX(-8deg);
+  filter: blur(2px);
 }
-#preloader.style-crisscross.active .p-top-right {
-  transform: translate(100%, -100%) rotate(5deg);
+#preloader.style-elastic-peel.active .p-top-right {
+  transform: translate(100%, -50%) skewX(8deg);
+  filter: blur(2px);
 }
-#preloader.style-crisscross.active .p-bottom-left {
-  transform: translate(-100%, 100%) rotate(5deg);
+#preloader.style-elastic-peel.active .p-bottom-left {
+  transform: translate(-100%, 50%) skewX(8deg);
+  filter: blur(2px);
 }
-#preloader.style-crisscross.active .p-bottom-right {
-  transform: translate(100%, 100%) rotate(-5deg);
-}
-
-/* Curtains Dragging State (Driven by CSS custom property --drag-progress) */
-#preloader.style-curtains.dragging .p-top-left {
-  transform: translateX(calc(var(--drag-progress) * -100%));
-  transition: none;
-}
-#preloader.style-curtains.dragging .p-top-right {
-  transform: translateX(calc(var(--drag-progress) * 100%));
-  transition: none;
+#preloader.style-elastic-peel.active .p-bottom-right {
+  transform: translate(100%, 50%) skewX(-8deg);
+  filter: blur(2px);
 }
 
-/* Criss-Cross Dragging State */
-#preloader.style-crisscross.dragging .p-top-left {
-  transform: translate(calc(var(--drag-progress) * -100%), calc(var(--drag-progress) * -100%)) rotate(calc(var(--drag-progress) * -5deg));
+/* Elastic Peel Dragging State */
+#preloader.style-elastic-peel.dragging .p-top-left {
+  transform: translate(calc(var(--drag-progress) * -100%), calc(var(--drag-progress) * -50%)) skewX(calc(var(--drag-progress) * -8deg));
   transition: none;
 }
-#preloader.style-crisscross.dragging .p-top-right {
-  transform: translate(calc(var(--drag-progress) * 100%), calc(var(--drag-progress) * -100%)) rotate(calc(var(--drag-progress) * 5deg));
+#preloader.style-elastic-peel.dragging .p-top-right {
+  transform: translate(calc(var(--drag-progress) * 100%), calc(var(--drag-progress) * -50%)) skewX(calc(var(--drag-progress) * 8deg));
   transition: none;
 }
-#preloader.style-crisscross.dragging .p-bottom-left {
-  transform: translate(calc(var(--drag-progress) * -100%), calc(var(--drag-progress) * 100%)) rotate(calc(var(--drag-progress) * 5deg));
+#preloader.style-elastic-peel.dragging .p-bottom-left {
+  transform: translate(calc(var(--drag-progress) * -100%), calc(var(--drag-progress) * 50%)) skewX(calc(var(--drag-progress) * 8deg));
   transition: none;
 }
-#preloader.style-crisscross.dragging .p-bottom-right {
-  transform: translate(calc(var(--drag-progress) * 100%), calc(var(--drag-progress) * 100%)) rotate(calc(var(--drag-progress) * -5deg));
+#preloader.style-elastic-peel.dragging .p-bottom-right {
+  transform: translate(calc(var(--drag-progress) * 100%), calc(var(--drag-progress) * 50%)) skewX(calc(var(--drag-progress) * -8deg));
+  transition: none;
+}
+
+/* 3. STAGGERED THREAD DIAGONAL UNRAVEL (style-diagonal-unravel) */
+#preloader.style-diagonal-unravel .preloader-panel {
+  width: 50%;
+  height: 50%;
+  border: 1px dashed rgba(197, 168, 128, 0.12);
+}
+#preloader.style-diagonal-unravel .p-top-left {
+  top: 0;
+  left: 0;
+  transition: transform 1.4s cubic-bezier(0.77, 0, 0.175, 1) 0ms, filter 1.3s ease 0ms;
+}
+#preloader.style-diagonal-unravel .p-top-right {
+  top: 0;
+  right: 0;
+  transition: transform 1.4s cubic-bezier(0.77, 0, 0.175, 1) 120ms, filter 1.3s ease 120ms;
+}
+#preloader.style-diagonal-unravel .p-bottom-right {
+  bottom: 0;
+  right: 0;
+  transition: transform 1.4s cubic-bezier(0.77, 0, 0.175, 1) 240ms, filter 1.3s ease 240ms;
+}
+#preloader.style-diagonal-unravel .p-bottom-left {
+  bottom: 0;
+  left: 0;
+  transition: transform 1.4s cubic-bezier(0.77, 0, 0.175, 1) 360ms, filter 1.3s ease 360ms;
+}
+
+/* Asymmetric Unravel active state */
+#preloader.style-diagonal-unravel.active .p-top-left {
+  transform: translate(-100%, -100%) rotate(-12deg);
+  filter: saturate(0.5) blur(1px);
+}
+#preloader.style-diagonal-unravel.active .p-top-right {
+  transform: translate(100%, -100%) rotate(12deg);
+  filter: saturate(0.5) blur(1px);
+}
+#preloader.style-diagonal-unravel.active .p-bottom-right {
+  transform: translate(100%, 100%) rotate(-12deg);
+  filter: saturate(0.5) blur(1px);
+}
+#preloader.style-diagonal-unravel.active .p-bottom-left {
+  transform: translate(-100%, 100%) rotate(12deg);
+  filter: saturate(0.5) blur(1px);
+}
+
+/* Diagonal Unravel Dragging State */
+#preloader.style-diagonal-unravel.dragging .p-top-left {
+  transform: translate(calc(var(--drag-progress) * -100%), calc(var(--drag-progress) * -100%)) rotate(calc(var(--drag-progress) * -12deg));
+  transition: none;
+}
+#preloader.style-diagonal-unravel.dragging .p-top-right {
+  transform: translate(calc(var(--drag-progress) * 100%), calc(var(--drag-progress) * -100%)) rotate(calc(var(--drag-progress) * 12deg));
+  transition: none;
+}
+#preloader.style-diagonal-unravel.dragging .p-bottom-right {
+  transform: translate(calc(var(--drag-progress) * 100%), calc(var(--drag-progress) * 100%)) rotate(calc(var(--drag-progress) * -12deg));
+  transition: none;
+}
+#preloader.style-diagonal-unravel.dragging .p-bottom-left {
+  transform: translate(calc(var(--drag-progress) * -100%), calc(var(--drag-progress) * 100%)) rotate(calc(var(--drag-progress) * 12deg));
   transition: none;
 }
 

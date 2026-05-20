@@ -418,8 +418,9 @@ document.addEventListener('DOMContentLoaded', () => {
       preloader.style.display = 'none';
       preloader.classList.add('active');
     } else {
-      // 50% chance criss-cross, 50% curtains
-      const preloaderStyle = Math.random() > 0.5 ? 'style-crisscross' : 'style-curtains';
+      // Randomize between 3 ultra-premium interactive curtain styles: origami 3D, elastic tension rip, or staggered unravel
+      const styles = ['style-origami', 'style-elastic-peel', 'style-diagonal-unravel'];
+      const preloaderStyle = styles[Math.floor(Math.random() * styles.length)];
       preloader.classList.add(preloaderStyle);
 
       // Dynamic loader markup injection
