@@ -3358,3 +3358,365 @@ textarea.form-input {
     font-size: 1.8rem;
   }
 }
+
+/* ==========================================================================
+   B2B UPGRADES & PREMIUM AESTHETIC STYLINGS (AUTO-APPENDED)
+   ========================================================================== */
+
+/* 1. Dynamic Hero Slideshow Styles */
+.hero-bg-slideshow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+.hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+  filter: brightness(0.22) contrast(1.15);
+  transform: scale(1.04);
+}
+.hero-slide.active {
+  opacity: 1;
+  transform: scale(1.08);
+  animation: zoomBgActive 20s infinite alternate ease-in-out;
+  z-index: 1;
+}
+@keyframes zoomBgActive {
+  0% { transform: scale(1.04); }
+  100% { transform: scale(1.12); }
+}
+
+/* 2. 5-Column Desktop Stats Grid Overrides */
+@media (min-width: 992px) {
+  .stats-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+  }
+}
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: var(--border-radius-md);
+  border: 1px solid transparent;
+}
+.stat-card:hover {
+  background: rgba(255, 255, 255, 0.02);
+  border-color: var(--border-glass);
+  transform: translateY(-5px);
+}
+.stat-icon {
+  font-size: 1.8rem;
+  color: var(--accent);
+  margin-bottom: 0.8rem;
+  opacity: 0.85;
+  transition: transform 0.4s ease;
+}
+.stat-card:hover .stat-icon {
+  transform: scale(1.12) rotate(5deg);
+  color: var(--accent-light);
+}
+
+/* 3. B2B Product Cards & WhatsApp Inquiry CTA styling */
+.product-specs-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-glass);
+  font-size: 0.82rem;
+  text-align: left;
+}
+.product-specs-preview .spec-item {
+  color: var(--text-light);
+  display: flex;
+  justify-content: space-between;
+}
+.product-specs-preview .spec-item strong {
+  color: var(--accent-light);
+  font-weight: 600;
+}
+.product-card-cta {
+  margin-top: 1.2rem;
+  width: 100%;
+}
+.wa-card-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 0.75rem !important;
+  background-color: #25D366 !important;
+  border-color: #25D366 !important;
+  color: var(--primary-dark) !important;
+  font-weight: 700 !important;
+  text-transform: uppercase;
+  font-size: 0.78rem !important;
+  letter-spacing: 0.05em;
+  border-radius: var(--border-radius-sm);
+  transition: all 0.3s ease;
+}
+.wa-card-btn:hover {
+  background-color: #20ba59 !important;
+  border-color: #20ba59 !important;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+  transform: translateY(-2px);
+  color: var(--primary-dark) !important;
+}
+
+/* 4. Luxury Showcase Row (Why Choose Us) */
+.why-showcase-container {
+  margin-top: 4rem;
+}
+.why-showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+.why-showcase-card {
+  position: relative;
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-glass);
+  height: 260px;
+  box-shadow: var(--shadow-medium);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.why-showcase-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent);
+  box-shadow: var(--shadow-glow);
+}
+.why-showcase-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+  filter: brightness(0.65);
+}
+.why-showcase-card:hover .why-showcase-img {
+  transform: scale(1.08);
+  filter: brightness(0.5);
+}
+.why-showcase-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem;
+  background: linear-gradient(to top, rgba(10, 11, 13, 0.95) 0%, rgba(10, 11, 13, 0.4) 60%, transparent 100%);
+  text-align: left;
+}
+.why-showcase-tag {
+  color: var(--accent);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  display: inline-block;
+  margin-bottom: 0.3rem;
+}
+.why-showcase-title {
+  color: var(--text-white);
+  font-size: 1.15rem;
+  font-weight: 700;
+  font-family: var(--font-headings);
+  margin-bottom: 0.2rem;
+}
+.why-showcase-desc {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 991px) {
+  .why-showcase-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 576px) {
+  .why-showcase-grid {
+    grid-template-columns: 1fr;
+  }
+  .why-showcase-card {
+    height: 220px;
+  }
+}
+
+/* 5. Infinite Luxury Monochrome Partner Marquee */
+.logo-marquee-tape {
+  background-color: rgba(10, 11, 13, 0.85);
+  border-top: 1px solid var(--border-glass);
+  border-bottom: 1px solid var(--border-glass);
+  padding: 2.2rem 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  backdrop-filter: blur(10px);
+}
+.logo-marquee-tape::before,
+.logo-marquee-tape::after {
+  content: "";
+  height: 100%;
+  width: 150px;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  pointer-events: none;
+}
+.logo-marquee-tape::before {
+  left: 0;
+  background: linear-gradient(to right, var(--primary-dark) 0%, transparent 100%);
+}
+.logo-marquee-tape::after {
+  right: 0;
+  background: linear-gradient(to left, var(--primary-dark) 0%, transparent 100%);
+}
+.marquee-track {
+  display: flex;
+  width: calc(250px * 16);
+  animation: logoScroll 30s linear infinite;
+  gap: 4rem;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+.logo-node {
+  width: 200px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo-node-text {
+  font-family: var(--font-display, 'Syne', var(--font-headings));
+  font-weight: 800;
+  font-size: 1.3rem;
+  letter-spacing: 0.25em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  opacity: 0.45;
+}
+.logo-node-text span {
+  color: var(--accent);
+}
+.logo-node:hover .logo-node-text {
+  opacity: 1;
+  color: var(--accent-light);
+  text-shadow: 0 0 15px rgba(197, 168, 128, 0.4);
+}
+@keyframes logoScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-250px * 8)); }
+}
+
+/* 6. Pantone Color Swatches Grid (Fabric Page) */
+.pantone-section {
+  margin-top: 5rem;
+  text-align: center;
+}
+.pantone-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.8rem;
+  margin-top: 3rem;
+}
+.pantone-card {
+  background: var(--secondary-dark);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  text-align: left;
+}
+.pantone-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent);
+  box-shadow: var(--shadow-glow);
+}
+.pantone-color-block {
+  height: 140px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.pantone-color-block::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, transparent 50%);
+  pointer-events: none;
+}
+.pantone-info {
+  padding: 1.2rem;
+  background: var(--secondary-dark);
+}
+.pantone-name {
+  font-family: var(--font-headings);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-white);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.2rem;
+}
+.pantone-code {
+  font-family: var(--font-monospace, 'Courier New', monospace);
+  font-size: 0.72rem;
+  color: var(--accent);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+.pantone-label-chip {
+  display: inline-block;
+  margin-top: 0.6rem;
+  padding: 0.2rem 0.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-glass);
+  border-radius: 20px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-light);
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 991px) {
+  .pantone-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .pantone-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .pantone-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -137,7 +137,13 @@
 
   <!-- 3. HERO SECTION -->
   <section class="hero" id="home-hero">
-    <div class="hero-bg"></div>
+    <div class="hero-bg-slideshow">
+      <div class="hero-slide active" style="background-image: url('Shoot/Back Ground 1.png');"></div>
+      <div class="hero-slide" style="background-image: url('Shoot/Back Ground 2.png');"></div>
+      <div class="hero-slide" style="background-image: url('Shoot/Work Process.png');"></div>
+      <div class="hero-slide" style="background-image: url('Shoot/Custom.png');"></div>
+      <div class="hero-slide" style="background-image: url('Shoot/Finishing Pcs.png');"></div>
+    </div>
     <div class="hero-overlay"></div>
     
     <div class="container hero-content-wrapper">
@@ -163,9 +169,12 @@
         <!-- Left Side Image Slideshow -->
         <div class="intro-image-wrapper reveal reveal-slide-left" id="intro-image-container">
           <div class="slideshow-container">
-            <img class="slide-img active" src="Shoot/Fabrics.png" alt="Premium Cottons & Fabrics">
+            <img class="slide-img active" src="Shoot/First Page.png" alt="Velsar Premium Clothing Showcase">
             <img class="slide-img" src="Shoot/Model 1.png" alt="Finished Streetwear Custom Apparels">
-            <img class="slide-img" src="Shoot/First Page.png" alt="Velsar Premium Clothing Showcase">
+            <img class="slide-img" src="Shoot/Shoot.png" alt="Premium Streetwear Photoshoot">
+            <img class="slide-img" src="Shoot/Custom 1.png" alt="Custom Manufacturing Showcase">
+            <img class="slide-img" src="Shoot/Fabrics Image.png" alt="Premium Fabric Collection">
+            <img class="slide-img" src="Shoot/Work Process.png" alt="Factory Work Process">
           </div>
           <div class="intro-badge" style="z-index: 10;">
             <div class="intro-badge-num">100%</div>
@@ -345,6 +354,50 @@
         </div>
         
       </div>
+      
+      <!-- Why Choose Us Visual Showcase Row -->
+      <div class="why-showcase-container reveal">
+        <div class="why-showcase-grid">
+          
+          <div class="why-showcase-card">
+            <img class="why-showcase-img" src="Shoot/Fabrics Image.png" alt="Premium Fabric Close-up" loading="lazy">
+            <div class="why-showcase-overlay">
+              <span class="why-showcase-tag">Raw Materials</span>
+              <h4 class="why-showcase-title">Premium Fabric Sourcing</h4>
+              <p class="why-showcase-desc">Handpicked combed cotton & French Terry rolls from certified mills.</p>
+            </div>
+          </div>
+          
+          <div class="why-showcase-card">
+            <img class="why-showcase-img" src="Shoot/Custom 2.png" alt="Custom Manufacturing Process" loading="lazy">
+            <div class="why-showcase-overlay">
+              <span class="why-showcase-tag">Quality Control</span>
+              <h4 class="why-showcase-title">Multi-Stage QC</h4>
+              <p class="why-showcase-desc">GSM verification, shrinkage testing & AQL inspections on every lot.</p>
+            </div>
+          </div>
+          
+          <div class="why-showcase-card">
+            <img class="why-showcase-img" src="Shoot/Work Process.png" alt="Factory Stitching Line" loading="lazy">
+            <div class="why-showcase-overlay">
+              <span class="why-showcase-tag">Production</span>
+              <h4 class="why-showcase-title">Expert Stitching</h4>
+              <p class="why-showcase-desc">Skilled operators running high-speed flatlock & overlock machines.</p>
+            </div>
+          </div>
+          
+          <div class="why-showcase-card">
+            <img class="why-showcase-img" src="Shoot/Finishing Pcs.png" alt="Finished Apparel Collection" loading="lazy">
+            <div class="why-showcase-overlay">
+              <span class="why-showcase-tag">Finished Goods</span>
+              <h4 class="why-showcase-title">Streetwear Ready</h4>
+              <p class="why-showcase-desc">Export-packed collections ready for global brand distribution.</p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
     </div>
   </section>
 
@@ -412,6 +465,7 @@
         
         <!-- Stat 1: Fabric Colours (Interactive Hover) -->
         <div class="stat-card reveal reveal-scale reveal-delay-1 fabric-colours-card" id="fabric-colours-trigger">
+          <div class="stat-icon"><i class="fas fa-palette"></i></div>
           <div class="stat-number" data-target="100" data-suffix="+">0</div>
           <div class="stat-label">Fabric Colours</div>
           <div class="hover-tip"><i class="fas fa-hand-pointer"></i> Hover to view fabrics</div>
@@ -451,22 +505,32 @@
           </div>
         </div>
         
-        <!-- Stat 2: MOQ Starting -->
+        <!-- Stat 2: MOQ Sourcing -->
         <div class="stat-card reveal reveal-scale reveal-delay-2">
+          <div class="stat-icon"><i class="fas fa-tags"></i></div>
           <div class="stat-number" data-target="100" data-suffix=" pcs">0</div>
           <div class="stat-label">MOQ Starting</div>
         </div>
         
-        <!-- Stat 3: Worldwide Shipping -->
+        <!-- Stat 3: Premium Quality -->
         <div class="stat-card reveal reveal-scale reveal-delay-3">
+          <div class="stat-icon"><i class="fas fa-certificate"></i></div>
           <div class="stat-number" data-target="100" data-suffix="%">0</div>
-          <div class="stat-label">Worldwide Shipping</div>
+          <div class="stat-label">Export Grade</div>
         </div>
         
-        <!-- Stat 4: Happy Customers -->
+        <!-- Stat 4: Worldwide Shipping -->
         <div class="stat-card reveal reveal-scale reveal-delay-4">
+          <div class="stat-icon"><i class="fas fa-truck-fast"></i></div>
+          <div class="stat-number" data-target="100" data-suffix="%">0</div>
+          <div class="stat-label">Secure Delivery</div>
+        </div>
+        
+        <!-- Stat 5: Happy Partners -->
+        <div class="stat-card reveal reveal-scale reveal-delay-5">
+          <div class="stat-icon"><i class="fas fa-smile-beam"></i></div>
           <div class="stat-number" data-target="300" data-suffix="+">0</div>
-          <div class="stat-label">Happy Customers</div>
+          <div class="stat-label">Happy Partners</div>
         </div>
         
       </div>
@@ -582,6 +646,36 @@
       </a>
     </div>
   </section>
+
+  <!-- 9.5 INFINITE MONOCHROME LOGO MARQUEE -->
+  <div class="logo-marquee-tape">
+    <div class="logo-marquee-track">
+      <span class="marquee-logo">AESTHETIX</span>
+      <span class="marquee-dot">✦</span>
+      <span class="marquee-logo">VINTAGE</span>
+      <span class="marquee-dot">✦</span>
+      <span class="marquee-logo">STUDIO</span>
+      <span class="marquee-dot">✦</span>
+      <span class="marquee-logo">RAW</span>
+      <span class="marquee-dot">✦</span>
+      <span class="marquee-logo">MODERN</span>
+      <span class="marquee-dot">✦</span>
+      <span class="marquee-logo">HEAVYWEAR</span>
+      <span class="marquee-dot">✦</span>
+      <span class="marquee-logo">AESTHETIX</span>
+      <span class="marquee-dot">✦</span>
+      <span class="marquee-logo">VINTAGE</span>
+      <span class="marquee-dot">✦</span>
+      <span class="marquee-logo">STUDIO</span>
+      <span class="marquee-dot">✦</span>
+      <span class="marquee-logo">RAW</span>
+      <span class="marquee-dot">✦</span>
+      <span class="marquee-logo">MODERN</span>
+      <span class="marquee-dot">✦</span>
+      <span class="marquee-logo">HEAVYWEAR</span>
+      <span class="marquee-dot">✦</span>
+    </div>
+  </div>
 
   <!-- 10. SHARED FOOTER -->
   <footer class="footer">

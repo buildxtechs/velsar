@@ -10,7 +10,10 @@ const DEFAULT_PRODUCTS = [
     image: 'Shoot/Oversize.png',
     fabric: 'Single Jersey, 100% Super-Combed Cotton',
     gsm: '240 / 300 GSM (Heavyweight)',
-    desc: 'Expertly designed oversized t-shirt crafted for premium streetwear labels. Features a boxy silhouette, drop shoulders, and a thick ribbed collar that holds its shape. Perfect for high-density puff printing or custom embroidery.'
+    desc: 'Expertly designed oversized t-shirt crafted for premium streetwear labels. Features a boxy silhouette, drop shoulders, and a thick ribbed collar that holds its shape. Perfect for high-density puff printing or custom embroidery.',
+    sizes: 'XS to XXL (Custom fits)',
+    colors: '100+ Streetwear Shades',
+    moq: '300 Pcs (Custom Pantone) / 100 Pcs (Stock)'
   },
   {
     id: 'vs-ts-rf-02',
@@ -21,7 +24,10 @@ const DEFAULT_PRODUCTS = [
     image: 'Shoot/Regular Fit T Shirt.png',
     fabric: 'Single Jersey, 100% Cotton, Biowashed',
     gsm: '180 / 210 GSM',
-    desc: 'Classic export-quality retail fit. Durable, breathable, and exceptionally soft due to premium silicon washing. Ideal for corporate branding, retail merchandising, and casual fashion brands.'
+    desc: 'Classic export-quality retail fit. Durable, breathable, and exceptionally soft due to premium silicon washing. Ideal for corporate branding, retail merchandising, and casual fashion brands.',
+    sizes: 'XS to XXL (Custom fits)',
+    colors: '100+ Streetwear Shades',
+    moq: '300 Pcs (Custom Pantone) / 100 Pcs (Stock)'
   },
   {
     id: 'vs-ts-bx-03',
@@ -32,7 +38,10 @@ const DEFAULT_PRODUCTS = [
     image: 'Shoot/Boxy Fit.png',
     fabric: 'Single Jersey, 100% Cotton, Pre-shrunk',
     gsm: '240 GSM',
-    desc: 'Features a contemporary cropped length and wide shoulders for a premium boxy streetwear look. Made from combed cotton that provides ultimate comfort and print stability.'
+    desc: 'Features a contemporary cropped length and wide shoulders for a premium boxy streetwear look. Made from combed cotton that provides ultimate comfort and print stability.',
+    sizes: 'XS to XXL (Custom fits)',
+    colors: '100+ Streetwear Shades',
+    moq: '300 Pcs (Custom Pantone) / 100 Pcs (Stock)'
   },
   {
     id: 'vs-ts-pl-04',
@@ -43,7 +52,10 @@ const DEFAULT_PRODUCTS = [
     image: 'Shoot/Polo T SHirt.png',
     fabric: 'Pique Knit, Premium Cotton Blend',
     gsm: '220 / 240 GSM',
-    desc: 'Refined Polo T-Shirt featuring a custom-engineered knit collar and cuffs. Double needle stitched hems make it ideal for high-end corporate uniforms and country-club sportswear collections.'
+    desc: 'Refined Polo T-Shirt featuring a custom-engineered knit collar and cuffs. Double needle stitched hems make it ideal for high-end corporate uniforms and country-club sportswear collections.',
+    sizes: 'XS to XXL (Custom fits)',
+    colors: '100+ Streetwear Shades',
+    moq: '300 Pcs (Custom Pantone) / 100 Pcs (Stock)'
   },
   {
     id: 'vs-ts-aw-05',
@@ -54,7 +66,10 @@ const DEFAULT_PRODUCTS = [
     image: 'Shoot/Acideash.png',
     fabric: '100% Cotton, Specially Treated Acid Wash',
     gsm: '240 GSM',
-    desc: 'Streetwear staple featuring a beautiful vintage weathered look. Individually acid-washed for unique marbling effects. The fabric feels exceptionally soft and broke-in.'
+    desc: 'Streetwear staple featuring a beautiful vintage weathered look. Individually acid-washed for unique marbling effects. The fabric feels exceptionally soft and broke-in.',
+    sizes: 'XS to XXL (Custom fits)',
+    colors: '100+ Streetwear Shades',
+    moq: '300 Pcs (Custom Pantone) / 100 Pcs (Stock)'
   },
   {
     id: 'vs-ts-ld-06',
@@ -65,7 +80,10 @@ const DEFAULT_PRODUCTS = [
     image: 'Shoot/Lava Dyeing.png',
     fabric: '100% Cotton, Lava-Dyed Finished',
     gsm: '240 GSM',
-    desc: 'Dyed using advanced lava-dyeing techniques to achieve soft transitions and high-fashion seam fading. Pre-washed for a premium feel and zero-shrinkage.'
+    desc: 'Dyed using advanced lava-dyeing techniques to achieve soft transitions and high-fashion seam fading. Pre-washed for a premium feel and zero-shrinkage.',
+    sizes: 'XS to XXL (Custom fits)',
+    colors: '100+ Streetwear Shades',
+    moq: '300 Pcs (Custom Pantone) / 100 Pcs (Stock)'
   },
   {
     id: 'vs-ts-ow-07',
@@ -76,7 +94,10 @@ const DEFAULT_PRODUCTS = [
     image: 'Shoot/Optic Wash.png',
     fabric: '100% Combed Cotton, Optic Bio-Washed',
     gsm: '210 GSM',
-    desc: 'Brilliant optic white color retention. Advanced washing prevents yellowing and maintains a stark, luxury retail feel over dozens of wash cycles.'
+    desc: 'Brilliant optic white color retention. Advanced washing prevents yellowing and maintains a stark, luxury retail feel over dozens of wash cycles.',
+    sizes: 'XS to XXL (Custom fits)',
+    colors: '100+ Streetwear Shades',
+    moq: '300 Pcs (Custom Pantone) / 100 Pcs (Stock)'
   },
   {
     id: 'vs-ts-td-08',
@@ -87,7 +108,10 @@ const DEFAULT_PRODUCTS = [
     image: 'Shoot/Tie and Dye.png',
     fabric: '100% Cotton, Hand-Tied Premium Pigments',
     gsm: '180 GSM',
-    desc: 'Each shirt is hand-dyed by skilled artisans using non-toxic premium pigments. Vibrant swirl patterns that do not bleed. A must-have for summer collections.'
+    desc: 'Each shirt is hand-dyed by skilled artisans using non-toxic premium pigments. Vibrant swirl patterns that do not bleed. A must-have for summer collections.',
+    sizes: 'XS to XXL (Custom fits)',
+    colors: '100+ Streetwear Shades',
+    moq: '300 Pcs (Custom Pantone) / 100 Pcs (Stock)'
   },
   {
     id: 'vs-ts-cw-09',
@@ -98,7 +122,10 @@ const DEFAULT_PRODUCTS = [
     image: 'Shoot/CPT Wash.png',
     fabric: 'Cold-Pigment Dyed Combed Cotton',
     gsm: '240 GSM',
-    desc: 'Cold Pigment Treatment (CPT) gives a premium distressed look at structural seams and hems. Specially designed for modern urban fashion catalog collections.'
+    desc: 'Cold Pigment Treatment (CPT) gives a premium distressed look at structural seams and hems. Specially designed for modern urban fashion catalog collections.',
+    sizes: 'XS to XXL (Custom fits)',
+    colors: '100+ Streetwear Shades',
+    moq: '300 Pcs (Custom Pantone) / 100 Pcs (Stock)'
   },
   {
     id: 'vs-ts-rg-10',
@@ -109,7 +136,10 @@ const DEFAULT_PRODUCTS = [
     image: 'Shoot/Reygon.png',
     fabric: 'Premium Jersey, Contrast Sleeves',
     gsm: '200 GSM',
-    desc: 'Raglan-style construction with cross-cut sleeves for maximum upper body comfort. Multi-thread flatlock stitching highlights the athletic structural lines.'
+    desc: 'Raglan-style construction with cross-cut sleeves for maximum upper body comfort. Multi-thread flatlock stitching highlights the athletic structural lines.',
+    sizes: 'XS to XXL (Custom fits)',
+    colors: '100+ Streetwear Shades',
+    moq: '300 Pcs (Custom Pantone) / 100 Pcs (Stock)'
   },
 
   // Vests (3 styles)
@@ -122,7 +152,10 @@ const DEFAULT_PRODUCTS = [
     image: 'Shoot/Regular Vest.png',
     fabric: 'Rib Knit, 100% Combed Cotton',
     gsm: '180 GSM',
-    desc: 'Classic ribbed athletic vest. Designed with deep-cut armholes and a smooth scoop neck. Perfect for gym wear or inner layering.'
+    desc: 'Classic ribbed athletic vest. Designed with deep-cut armholes and a smooth scoop neck. Perfect for gym wear or inner layering.',
+    sizes: 'S to XL (Rib fits)',
+    colors: '50+ Stock Colors',
+    moq: '300 Pcs'
   },
   {
     id: 'vs-v-wr-02',
@@ -133,7 +166,10 @@ const DEFAULT_PRODUCTS = [
     image: 'Shoot/Washed Regular Vest.png',
     fabric: 'Cotton Rib, Specially Enzyme Washed',
     gsm: '180 GSM',
-    desc: 'Enzyme washed rib vest to achieve supreme comfort and an ultra-soft texture. Pre-shrunk to secure structural stability through washes.'
+    desc: 'Enzyme washed rib vest to achieve supreme comfort and an ultra-soft texture. Pre-shrunk to secure structural stability through washes.',
+    sizes: 'S to XL (Rib fits)',
+    colors: '50+ Stock Colors',
+    moq: '300 Pcs'
   },
   {
     id: 'vs-v-wo-03',
@@ -144,7 +180,10 @@ const DEFAULT_PRODUCTS = [
     image: 'Shoot/Vest Collection.png',
     fabric: 'Heavyweight Rib Cotton',
     gsm: '220 GSM',
-    desc: 'Modern streetwear drop-shoulder tank styled with a wider shoulder cut and flat bottom. Very popular in current casual streetwear collections.'
+    desc: 'Modern streetwear drop-shoulder tank styled with a wider shoulder cut and flat bottom. Very popular in current casual streetwear collections.',
+    sizes: 'S to XL (Rib fits)',
+    colors: '50+ Stock Colors',
+    moq: '300 Pcs'
   },
 
   // Women's Collection (6 styles)
@@ -157,7 +196,10 @@ const DEFAULT_PRODUCTS = [
     image: 'Shoot/Oversize Sweatshirt.png',
     fabric: 'French Terry, Super-Soft Cotton Blend',
     gsm: '280 GSM',
-    desc: 'Features a stylish cropped length, ribbed wristbands, and an oversized sleeve drape. Modern design engineered for maximum athleisure comfort.'
+    desc: 'Features a stylish cropped length, ribbed wristbands, and an oversized sleeve drape. Modern design engineered for maximum athleisure comfort.',
+    sizes: 'XS to XL (Streetwear fits)',
+    colors: '80+ Fashion Shades',
+    moq: '300 Pcs'
   },
   {
     id: 'vs-w-ct-02',
@@ -168,7 +210,10 @@ const DEFAULT_PRODUCTS = [
     image: 'Shoot/Oversize Croptop.png',
     fabric: '100% Premium Combed Cotton',
     gsm: '180 / 200 GSM',
-    desc: 'Chic crop top with dropped shoulders and raw hem options. Perfect for minimalist fashion designs and custom screen printing.'
+    desc: 'Chic crop top with dropped shoulders and raw hem options. Perfect for minimalist fashion designs and custom screen printing.',
+    sizes: 'XS to XL (Streetwear fits)',
+    colors: '80+ Fashion Shades',
+    moq: '300 Pcs'
   },
   {
     id: 'vs-w-tgt-03',
@@ -179,7 +224,10 @@ const DEFAULT_PRODUCTS = [
     image: 'Shoot/Croptop.png',
     fabric: 'French Terry, Ribbed Underband',
     gsm: '280 GSM',
-    desc: 'Features a tight ribbed elastic bottom band (TGT Bottom) to create a structured blouson effect. Modern streetwear aesthetic for female urban fashion.'
+    desc: 'Features a tight ribbed elastic bottom band (TGT Bottom) to create a structured blouson effect. Modern streetwear aesthetic for female urban fashion.',
+    sizes: 'XS to XL (Streetwear fits)',
+    colors: '80+ Fashion Shades',
+    moq: '300 Pcs'
   },
   {
     id: 'vs-w-cps-04',
@@ -190,7 +238,10 @@ const DEFAULT_PRODUCTS = [
     image: 'Shoot/Croptop Polo T Shirt.png',
     fabric: 'French Terry Cotton with Knit Polo Collar',
     gsm: '260 GSM',
-    desc: 'A fusion of vintage sportiness and modern streetwear. Features a heavy-knit polo collar and a premium silver-zip detail at the neckline.'
+    desc: 'A fusion of vintage sportiness and modern streetwear. Features a heavy-knit polo collar and a premium silver-zip detail at the neckline.',
+    sizes: 'XS to XL (Streetwear fits)',
+    colors: '80+ Fashion Shades',
+    moq: '300 Pcs'
   },
   {
     id: 'vs-w-vs-05',
@@ -201,7 +252,10 @@ const DEFAULT_PRODUCTS = [
     image: 'Shoot/Womens Vest.png',
     fabric: 'Rib Knit, Soft Cotton Elastane Blend',
     gsm: '210 GSM',
-    desc: 'Fitted vest with excellent stretch recovery. Hugs the body comfortably without losing its shape over time. Very soft and skin-friendly fabric.'
+    desc: 'Fitted vest with excellent stretch recovery. Hugs the body comfortably without losing its shape over time. Very soft and skin-friendly fabric.',
+    sizes: 'XS to XL (Streetwear fits)',
+    colors: '80+ Fashion Shades',
+    moq: '300 Pcs'
   },
   {
     id: 'vs-w-hs-06',
@@ -212,7 +266,10 @@ const DEFAULT_PRODUCTS = [
     image: 'Shoot/Half Sleeve.png',
     fabric: '100% Cotton, Silicon Finished',
     gsm: '180 GSM',
-    desc: 'Slightly contoured loose-fit half sleeve t-shirt. Double stitched seams with back-neck reinforcement tapes for maximum longevity.'
+    desc: 'Slightly contoured loose-fit half sleeve t-shirt. Double stitched seams with back-neck reinforcement tapes for maximum longevity.',
+    sizes: 'XS to XL (Streetwear fits)',
+    colors: '80+ Fashion Shades',
+    moq: '300 Pcs'
   },
 
   // Hoodies (3 styles)
@@ -225,7 +282,10 @@ const DEFAULT_PRODUCTS = [
     image: 'Shoot/Oversize Hoodies.png',
     fabric: 'Heavy French Terry / Brushed Fleece',
     gsm: '320 / 360 / 400 GSM',
-    desc: 'Premium high-street heavy hoodie. Double-lined hood, no drawstrings for a clean futuristic look, kangaroo pocket, and drop-shoulder boxy cuts.'
+    desc: 'Premium high-street heavy hoodie. Double-lined hood, no drawstrings for a clean futuristic look, kangaroo pocket, and drop-shoulder boxy cuts.',
+    sizes: 'S to XXL (Heavyweight cuts)',
+    colors: '100+ High-Street Shades',
+    moq: '300 Pcs (Custom Pantone) / 100 Pcs (Stock)'
   },
   {
     id: 'vs-h-rf-02',
@@ -236,7 +296,10 @@ const DEFAULT_PRODUCTS = [
     image: 'Shoot/Regular Hoodies.png',
     fabric: 'French Terry Cotton, Metal Eyelets',
     gsm: '300 GSM',
-    desc: 'Standard luxury retail fit. Features thick round woven drawstrings with premium metal tips, double-needle seams, and robust ribbed cuffs.'
+    desc: 'Standard luxury retail fit. Features thick round woven drawstrings with premium metal tips, double-needle seams, and robust ribbed cuffs.',
+    sizes: 'S to XXL (Heavyweight cuts)',
+    colors: '100+ High-Street Shades',
+    moq: '300 Pcs (Custom Pantone) / 100 Pcs (Stock)'
   },
   {
     id: 'vs-h-zh-03',
@@ -247,7 +310,10 @@ const DEFAULT_PRODUCTS = [
     image: 'Shoot/Zipper Hoodies.png',
     fabric: 'French Terry Cotton, YKK Heavy-Duty Zip',
     gsm: '340 GSM',
-    desc: 'Streetwear full-zip hoodie featuring custom gunmetal YKK zipper, double-layered hood, dropped shoulders, and massive kangaroo pockets.'
+    desc: 'Streetwear full-zip hoodie featuring custom gunmetal YKK zipper, double-layered hood, dropped shoulders, and massive kangaroo pockets.',
+    sizes: 'S to XXL (Heavyweight cuts)',
+    colors: '100+ High-Street Shades',
+    moq: '300 Pcs (Custom Pantone) / 100 Pcs (Stock)'
   },
 
   // Sweatshirts (2 styles)
@@ -260,7 +326,10 @@ const DEFAULT_PRODUCTS = [
     image: 'Shoot/Oversize Sweatshirt.png',
     fabric: 'Heavy French Terry Cotton',
     gsm: '320 / 360 GSM',
-    desc: 'Relaxed oversized crewneck sweatshirt with wide drop shoulders. Side-seam ribbing panels allow maximum mobility. Crafted for high-end fashion lines.'
+    desc: 'Relaxed oversized crewneck sweatshirt with wide drop shoulders. Side-seam ribbing panels allow maximum mobility. Crafted for high-end fashion lines.',
+    sizes: 'S to XXL (Heavyweight cuts)',
+    colors: '100+ High-Street Shades',
+    moq: '300 Pcs (Custom Pantone) / 100 Pcs (Stock)'
   },
   {
     id: 'vs-sw-rf-02',
@@ -271,7 +340,10 @@ const DEFAULT_PRODUCTS = [
     image: 'Shoot/Regular Sweatshirt.png',
     fabric: 'French Terry / Fleece lining, Silicon Softened',
     gsm: '300 GSM',
-    desc: 'Classic crewneck pullover with robust double-stitched collar, cuffs, and hem. Exceptionally warm and lint-free interior lining.'
+    desc: 'Classic crewneck pullover with robust double-stitched collar, cuffs, and hem. Exceptionally warm and lint-free interior lining.',
+    sizes: 'S to XXL (Heavyweight cuts)',
+    colors: '100+ High-Street Shades',
+    moq: '300 Pcs (Custom Pantone) / 100 Pcs (Stock)'
   },
 
   // Shorts & Bottoms (4 styles)
@@ -284,7 +356,10 @@ const DEFAULT_PRODUCTS = [
     image: 'Shoot/Shorts.png',
     fabric: 'Heavy French Terry, Elastic Waistband',
     gsm: '280 / 320 GSM',
-    desc: 'Relaxed fit fleece shorts. Features deep side pockets, a back pocket, thick waist elastic, and custom flat drawstrings. Very popular for streetwear sets.'
+    desc: 'Relaxed fit fleece shorts. Features deep side pockets, a back pocket, thick waist elastic, and custom flat drawstrings. Very popular for streetwear sets.',
+    sizes: 'S to XXL (Elasticated cuts)',
+    colors: '60+ Streetwear Shades',
+    moq: '300 Pcs'
   },
   {
     id: 'vs-b-tp-02',
@@ -295,7 +370,10 @@ const DEFAULT_PRODUCTS = [
     image: 'Shoot/Track Pant.png',
     fabric: 'Polyester-Cotton Premium Interlock Knit',
     gsm: '280 GSM',
-    desc: 'Athletic fit joggers featuring zipped side pockets, tailored cuffs, and excellent ventilation properties. Comfortable for active sports or daily wear.'
+    desc: 'Athletic fit joggers featuring zipped side pockets, tailored cuffs, and excellent ventilation properties. Comfortable for active sports or daily wear.',
+    sizes: 'S to XXL (Elasticated cuts)',
+    colors: '60+ Streetwear Shades',
+    moq: '300 Pcs'
   },
   {
     id: 'vs-b-cp-29',
@@ -306,7 +384,10 @@ const DEFAULT_PRODUCTS = [
     image: 'Shoot/Comfort pant.png',
     fabric: 'Heavy French Terry, Relaxed Leg Fit',
     gsm: '300 GSM',
-    desc: 'Straight-leg pants with a comfortable elastic waistband. Cozy and stylish streetwear essential, matching perfectly with oversize sweatshirts.'
+    desc: 'Straight-leg pants with a comfortable elastic waistband. Cozy and stylish streetwear essential, matching perfectly with oversize sweatshirts.',
+    sizes: 'S to XXL (Elasticated cuts)',
+    colors: '60+ Streetwear Shades',
+    moq: '300 Pcs'
   },
   {
     id: 'vs-b-bg-04',
@@ -317,7 +398,10 @@ const DEFAULT_PRODUCTS = [
     image: 'Shoot/Baggy Pant.png',
     fabric: 'Heavyweight Loopback French Terry',
     gsm: '340 GSM',
-    desc: 'Ultra-baggy cut track pants with wide ankles. Engineered for premium streetwear labels seeking robust draping structures and comfort.'
+    desc: 'Ultra-baggy cut track pants with wide ankles. Engineered for premium streetwear labels seeking robust draping structures and comfort.',
+    sizes: 'S to XXL (Elasticated cuts)',
+    colors: '60+ Streetwear Shades',
+    moq: '300 Pcs'
   },
 
   // Babies Collection (5 styles)
@@ -330,7 +414,10 @@ const DEFAULT_PRODUCTS = [
     image: 'Shoot/babies_oversized_tshirt.png',
     fabric: '100% Organic Cotton, Hyper-Soft',
     gsm: '160 / 180 GSM',
-    desc: 'Super-soft oversized kids t-shirt. Absolutely skin-friendly, bio-washed, and processed without harsh chemical dyes. Nickel-free shoulder button snaps.'
+    desc: 'Super-soft oversized kids t-shirt. Absolutely skin-friendly, bio-washed, and processed without harsh chemical dyes. Nickel-free shoulder button snaps.',
+    sizes: '0M to 24M (Organic snaps)',
+    colors: '30+ Pastel Shades',
+    moq: '300 Pcs (Organic Sourced Yarn)'
   },
   {
     id: 'vs-bb-pl-02',
@@ -341,7 +428,10 @@ const DEFAULT_PRODUCTS = [
     image: 'Shoot/babies_polo_tshirt.png',
     fabric: '100% Organic Pique Knit Cotton',
     gsm: '180 GSM',
-    desc: 'Adorable miniature polo with dynamic contrasts on collar trims. Non-scratch soft fabric collars prevent irritation on babies neck.'
+    desc: 'Adorable miniature polo with dynamic contrasts on collar trims. Non-scratch soft fabric collars prevent irritation on babies neck.',
+    sizes: '0M to 24M (Organic snaps)',
+    colors: '30+ Pastel Shades',
+    moq: '300 Pcs (Organic Sourced Yarn)'
   },
   {
     id: 'vs-bb-rf-03',
@@ -352,7 +442,10 @@ const DEFAULT_PRODUCTS = [
     image: 'Shoot/babies_regular_tshirt.png',
     fabric: '100% Organic Combed Cotton',
     gsm: '160 GSM',
-    desc: 'Lightweight, ultra-breathable daily wear t-shirt. Elastic stitching enables easy pulling over babies head.'
+    desc: 'Lightweight, ultra-breathable daily wear t-shirt. Elastic stitching enables easy pulling over babies head.',
+    sizes: '0M to 24M (Organic snaps)',
+    colors: '30+ Pastel Shades',
+    moq: '300 Pcs (Organic Sourced Yarn)'
   },
   {
     id: 'vs-bb-sh-04',
@@ -363,7 +456,10 @@ const DEFAULT_PRODUCTS = [
     image: 'Shoot/babies_shorts.png',
     fabric: '100% Soft Organic Loopback Cotton',
     gsm: '220 GSM',
-    desc: 'Stretchy cotton shorts featuring extremely gentle encased elastic waistbands. Roomy diaper-friendly crotch cuts.'
+    desc: 'Stretchy cotton shorts featuring extremely gentle encased elastic waistbands. Roomy diaper-friendly crotch cuts.',
+    sizes: '0M to 24M (Organic snaps)',
+    colors: '30+ Pastel Shades',
+    moq: '300 Pcs (Organic Sourced Yarn)'
   },
   {
     id: 'vs-bb-sw-05',
@@ -374,7 +470,10 @@ const DEFAULT_PRODUCTS = [
     image: 'Shoot/babies_sweatshirt.png',
     fabric: 'Organic Cotton French Terry',
     gsm: '240 GSM',
-    desc: 'Charming warm crewneck sweatshirt. Soft-ribbed cuffs and neckband that stretch comfortably. Made from 100% hypoallergenic organic fabrics.'
+    desc: 'Charming warm crewneck sweatshirt. Soft-ribbed cuffs and neckband that stretch comfortably. Made from 100% hypoallergenic organic fabrics.',
+    sizes: '0M to 24M (Organic snaps)',
+    colors: '30+ Pastel Shades',
+    moq: '300 Pcs (Organic Sourced Yarn)'
   }
 ];
 
@@ -844,6 +943,18 @@ function renderProducts(productsList) {
         <span class="product-cat">${prod.categoryLabel}</span>
         <h4 class="product-title">${prod.name}</h4>
         <span class="product-code">${prod.code}</span>
+        
+        <div class="product-specs-preview">
+          <div class="spec-item"><strong>Fabric:</strong> <span>${prod.fabric}</span></div>
+          <div class="spec-item"><strong>GSM:</strong> <span>${prod.gsm}</span></div>
+          <div class="spec-item"><strong>MOQ:</strong> <span>${prod.moq}</span></div>
+        </div>
+        
+        <div class="product-card-cta">
+          <a class="wa-card-btn" href="${generateWhatsAppLink(prod)}" target="_blank">
+            <i class="fab fa-whatsapp"></i> Inquire MOQ
+          </a>
+        </div>
       </div>
     `;
     
@@ -935,6 +1046,9 @@ function setupQuickViewModal() {
     
     modal.querySelector('#modal-spec-fabric').textContent = prod.fabric;
     modal.querySelector('#modal-spec-gsm').textContent = prod.gsm;
+    modal.querySelector('#modal-spec-sizes').textContent = prod.sizes;
+    modal.querySelector('#modal-spec-colors').textContent = prod.colors;
+    modal.querySelector('#modal-spec-moq').textContent = prod.moq;
     
     // WhatsApp button setup
     const waButton = modal.querySelector('.modal-wa-btn');
@@ -1156,4 +1270,20 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   
   initIntroSlideshow();
+
+  // --- DYNAMIC HERO SLIDESHOW ROTATION (4S CYCLE) ---
+  const initHeroSlideshow = () => {
+    const slides = document.querySelectorAll('.hero-slide');
+    if (slides.length === 0) return;
+    
+    let currentSlide = 0;
+    
+    setInterval(() => {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }, 4000); // 4-second visual rotation loop
+  };
+  
+  initHeroSlideshow();
 });
